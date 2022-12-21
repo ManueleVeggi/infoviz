@@ -2,8 +2,8 @@
 
 Final Project of "Information Visualisation" (Prof. Marilena Daquino) at University of Bologna, MA "Digital Humanities and Digital Knowledge" (a.y. 2022/2023)
 
-Project title TBC
 Main site at the following [link](https://manueleveggi.github.io/infoviz/)
+
 MET Source dataset available [here](https://github.com/metmuseum/openaccess/blob/master/MetObjects.csv)
 
 ## Team
