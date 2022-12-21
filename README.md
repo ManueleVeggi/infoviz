@@ -6,7 +6,7 @@ Project title TBC
 
 ## Team
 
-- Ali Gasempouri
+- Ali Ghasempouri
 - Sebastiano Giacomini
 - Manuele Veggi
 
