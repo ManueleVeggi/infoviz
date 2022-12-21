@@ -4,13 +4,16 @@ Final Project of "Information Visualisation" (Prof. Marilena Daquino) at Univers
 
 Main site at the following [link](https://manueleveggi.github.io/infoviz/)
 
-MET Source dataset available [here](https://github.com/metmuseum/openaccess/blob/master/MetObjects.csv)
-
 ## Team
 
 - Ali Ghasempouri
 - Sebastiano Giacomini
 - Manuele Veggi
+
+## References
+
+- MET Source dataset available [here](https://github.com/metmuseum/openaccess/blob/master/MetObjects.csv)
+- Website template available [here](https://github.com/BuckyMaler/global)
 
 ## License
 
@@ -24,4 +27,3 @@ This work is licensed under a
 [cc-by]: http://creativecommons.org/licenses/by/4.0/
 [cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
 [cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
-
