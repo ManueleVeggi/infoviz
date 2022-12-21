@@ -1,8 +1,14 @@
 # Nice to MET you
 
-Final Project for the course "Information Visualisation", Prof Daquino - MA "Digital Humanities and Digital Knowledge", University of Bologna.
+Final Project of "Information Visualisation" (Prof. Marilena Daquino) at University of Bologna, MA "Digital Humanities and Digital Knowledge" (a.y. 2022/2023)
 
 Project title TBC
+
+## Team
+
+- Ali Gasempouri
+- Sebastiano Giacomini
+- Manuele Veggi
 
 ## License
 
