@@ -1,5 +1,5 @@
 // Schiavone, The Marriage of Cupid and Psyche: https://www.metmuseum.org/art/collection/search/437638
-
+// add <div id="chartdiv"></div> <!-- source: https://www.amcharts.com/demos/animations-along-lines/ -->
 am5.ready(function() {
 
     // Create root element
