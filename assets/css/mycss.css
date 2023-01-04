@@ -62,7 +62,3 @@ p {
     width: 100%;
     height: 550px;
 }
-
-.slider--item-image:hover {
-    transform: scale(2);
-}
