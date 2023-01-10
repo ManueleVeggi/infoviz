@@ -1077,7 +1077,7 @@
     }), $(".cta").click(function () {
         var t = $(".side-nav").find(".is-active"),
             n = $(".side-nav").children().index(t),
-            s = $(".side-nav").children().length - 1,
+            s = $(".side-nav").children().length - 4,
             r = s;
         e(s), i(n, r, s)
     });

@@ -92,3 +92,54 @@ p {
     box-shadow: 3px 3px 2px rgba(1, 0, 0, 0.365);
     transition: box-shadow 0.3s ease-in-out;
 }
+
+.slider--item-left a, .slider--item-right a{
+    cursor: not-allowed;
+}
+
+.slider--item-left p, .slider--item-right p  {
+    visibility: hidden;
+}
+
+.about--options>a {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    text-decoration: none;
+    color: black;
+    border: 5px solid #ed0025;;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translateY(-4rem);
+}
+
+.about--options>a:nth-child(1) {
+    background-image: url("https://www.archivalmethods.com/blog/wp-content/uploads/7-Letters-copy.jpg")
+}
+
+.about--options>a:nth-child(2) {
+    background-image: url("../img/about-philosophy.jpg")
+}
+
+.about--options>a:nth-child(3) {
+    background-image: url("../img/about-history.jpg")
+}
+
+.about--options>a:hover h3 {
+    bottom: -50px;
+    color: #ed0025;
+}
+
+.final:not(#finalmain) {
+    display: none;
+}
+
+.final:not(#finalmain)>h2 {
+    margin-top: 14%;
+}
+
+.final .btn-group {
+    margin: auto;
+    text-align: center;
+}
