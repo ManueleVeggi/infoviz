@@ -15,11 +15,9 @@
   </script>
 
   <!-- Charts -->
-  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-  <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
-  <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
-  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
-  <script src="assets/js/graph.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="assets/js/graphs.js"></script>
 
 
   <meta charset="utf-8">
@@ -114,8 +112,28 @@
               </div>
             </li>
             <li class="l-section section" id="dealers">
-              <div class="work">
-                <h2>DEALERS</h2>
+              <div class="work" style="text-align: center;">
+                <h2>Unique stories of an art collection</h2>
+                <p>Each artwork can tell us an inimitable stories, where art and commerce converge</p>
+
+                <div class="row">
+                  <div class="col-3">
+                    <button type="button" class="btn btn-outline-danger">Who?</button>
+                  </div>
+                  <div class="col-3">
+                    <button type="button" class="btn btn-outline-danger">What?</button>
+                  </div>
+                  <div class="col-3">
+                    <button type="button" class="btn btn-outline-danger">When?</button>
+                  </div>
+                  <div class="col-3">
+                    <button type="button" class="btn btn-outline-danger">How?</button>
+                  </div>
+                </div>
+
+                <div id="chart_div"></div>
+      
+              
               </div>
             </li>
             <li class="l-section section">
@@ -331,7 +349,7 @@
                 </div>
               </div>
               -->
-
+            </li>
             <li class="l-section section">
               <div class="hire text-center">
                 <h2>Credits</h2>
