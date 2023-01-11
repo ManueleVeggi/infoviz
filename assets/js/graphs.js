@@ -1,7 +1,6 @@
 google.charts.load('current', {
     packages: ['corechart', 'bar']
 });
-google.charts.setOnLoadCallback(linedata);
 
 // Ancillary functions
 
@@ -90,25 +89,31 @@ function drawViz(rawData) {
 
     var metData = freqArray(arr);
 
-    var data = google.visualization.arrayToDataTable(metData);
+    const metSortedData = metData.sort((a, b) => b[1] - a[1])
+    console.log(metSortedData)
+
+    var data = google.visualization.arrayToDataTable(metData.slice(0, 13));
 
     var options = {
-        title: 'Italian painting at MET: ',
+        title: 'Most recurrent Italian painter at MET',
         hAxis: {
-            title: 'Artist',
+            title: 'Artists',
+            slantedText: true,
+            textStyle: {'fontSize': 9}
         },
         vAxis: {
             title: 'Occurrence in the collection',
-            viewWindow:{
-                max:25,
-                min:0
+            viewWindow: {
+                max: 25,
+                min: 0
             }
         },
+        height: 400,
+        width: 1000,
+        legend: 'none',
         colors: ['red']
     };
 
-    var chart = new google.visualization.ColumnChart(
-        document.getElementById('chart_div'));
-
+    var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
     chart.draw(data, options);
 }

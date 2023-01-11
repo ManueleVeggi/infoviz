@@ -1,5 +1,5 @@
-function toggleDiv(id) {
-    var myClass = document.getElementsByClassName("final");
+function toggleDiv(className, id) {
+    var myClass = document.getElementsByClassName(className);
     for(var i = 0; i < myClass.length; i++) { 
         myClass[i].style.display='none'
     }
@@ -13,5 +13,17 @@ function toggleDiv(id) {
     }
 
     toDisplay.style.display = "block"; 
+
+}
+
+function toggleDivViz(className, id) {
+    var myClass = document.getElementsByClassName(className);
+    for(var i = 0; i < myClass.length; i++) { 
+        myClass[i].style.display='none'
+    }
+    
+    var toDisplay = document.getElementById(id);
+    toDisplay.style.display = "block"; 
+    document.getElementById('vizheader').style.display = "none"; 
 
 }
