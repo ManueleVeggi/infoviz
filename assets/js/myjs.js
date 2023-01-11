@@ -23,7 +23,7 @@ function toggleDivViz(className, id) {
     }
     
     var toDisplay = document.getElementById(id);
-    if "row" in id {
+    if (id.includes("row")) {
         toDisplay.style.display = "flex"
     }
     else {
