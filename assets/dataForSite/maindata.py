@@ -8,8 +8,8 @@ def appendItem(cell, mainList):
             mainList.append(str(el).strip())
     return mainList
 
-metData = pd.read_csv("data_management/DataFrame Transfers and Agents.csv")
-zeriData = pd.read_csv("data_viz/dataForSite/resultZeri.csv")
+metData = pd.read_csv("data_management/transfers.csv")
+zeriData = pd.read_csv("data_management/draftIntegrated.csv")
 
 zeriDealer = []
 
@@ -33,9 +33,9 @@ metFreq = collections.Counter(metDealer)
 metDealerDf = pd.DataFrame({"freq": metFreq})
 print(metDealerDf)
 
-artworks = metData[["Title", "Artist Alpha Sort", "Object End Date", "Object Number", "AccessionYear", "lastTransfer"]]
+artworks = metData[["Title", "ArtistAlphaSort", "Object End Date", "Object Number", "AccessionYear", "lastTransfer"]]
 
 #Export
-zeriDealerDf.to_csv("data_viz/dataForSite/exportCsv/zeridealer.csv")
-metDealerDf.to_csv("data_viz/dataForSite/exportCsv/metdealer.csv")
-artworks.to_csv("data_viz/dataForSite/exportCsv/metartworks.csv")
+zeriDealerDf.to_csv("assets/dataForSite/exportCsv/zeridealer.csv")
+metDealerDf.to_csv("assets/dataForSite/exportCsv/metdealer.csv")
+artworks.to_csv("assets/dataForSite/exportCsv/metartworks.csv")
