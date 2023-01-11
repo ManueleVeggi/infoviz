@@ -19,7 +19,8 @@ function toggleDiv(className, id) {
 function toggleDivViz(className, id) {
     var myClass = document.getElementsByClassName(className);
     for(var i = 0; i < myClass.length; i++) { 
-        myClass[i].style.display='none'
+        myClass[i].style.display='none';
+        myClass[i].classList.remove("replicateTransition");
     }
     
     var toDisplay = document.getElementById(id);
@@ -30,5 +31,6 @@ function toggleDivViz(className, id) {
         toDisplay.style.display = "block"; 
     }
     document.getElementById('vizheader').style.display = "none"; 
+    toDisplay.classList.add("replicateTransition")
 
 }
