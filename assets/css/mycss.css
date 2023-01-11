@@ -215,16 +215,3 @@ p {
     font-weight: bold;
     color: #ed0025;
 }
-
-.whatviz {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.replicateTransition {
-    opacity: 1;
-    visibility: visible;
-    z-index: 1;
-    -webkit-transition: opacity .4s ease-in-out .4s;
-    transition: opacity .4s ease-in-out .4s;
-} 
