@@ -8,7 +8,7 @@ function toggleDiv(className, id) {
 
     if (id=='finalmain') {
         location.reload
-        toDisplay.style.marginTop = "10%";
+        toDisplay.style.marginTop = "15%";
         toDisplay.style.transform = "translateY(-4rem)";
     }
 

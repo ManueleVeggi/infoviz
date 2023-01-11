@@ -205,3 +205,13 @@ p {
     color: white;
     transform: rotateY(180deg);
   }
+
+.whatviz p:last-child {
+    margin-top: 2em;
+    text-align: right;
+}
+
+.whatviz p:last-child:hover {
+    font-weight: bold;
+    color: #ed0025;
+}

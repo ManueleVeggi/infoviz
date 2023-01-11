@@ -121,17 +121,17 @@
 
                 <div class="row">
                   <div class="col-3">
-                    <button type="button" class="btn btn-outline-danger">Who?</button>
+                    <button type="button" class="btn btn-outline-danger">WHO?</button>
                   </div>
                   <div class="col-3">
                     <button type="button" class="btn btn-outline-danger"
-                      onclick="toggleDivViz('firstviz','frequentartist'); linedata();">What?</button>
+                      onclick="toggleDivViz('firstviz','frequentartist'); linedata();">WHAT?</button>
                   </div>
                   <div class="col-3">
-                    <button type="button" class="btn btn-outline-danger">When?</button>
+                    <button type="button" class="btn btn-outline-danger">WHEN?</button>
                   </div>
                   <div class="col-3">
-                    <button type="button" class="btn btn-outline-danger">How?</button>
+                    <button type="button" class="btn btn-outline-danger">HOW?</button>
                   </div>
                 </div>
 
@@ -189,13 +189,14 @@
                       </div>
                     </div>
 
-                    <p>SEE THE VISUALIZATION <i class="bi bi-arrow-right" onclick="toggleDivViz('whatviz','chartvizwhat')"></i></p>
+                    <p onclick="toggleDivViz('whatviz','chartvizwhat'); linedata();">SEE THE VISUALIZATION
+                      <!-- <i class="bi bi-arrow-right"></i>-->
+                    </p>
 
                   </div>
 
                   <div class="whatviz" id="chartvizwhat">
-                    <!-- FIX LABEL!!! -->
-                    <div id="chart_div" style="width: 100%;"></div>
+                    <div id="chart_div" style="width: 100%; margin-top: 2em;"></div>
                     <!-- This is removed, as when it comes back the row is not working, why?!
                     <p>SEE THE ARTISTS <i class="bi bi-arrow-right" onclick="toggleDivViz('whatviz','cardrow')"></i></p>
                     -->

@@ -36,6 +36,6 @@ print(metDealerDf)
 artworks = metData[["Title", "Artist Alpha Sort", "Object End Date", "Object Number", "AccessionYear", "lastTransfer"]]
 
 #Export
-#zeriDealerDf.to_csv("data_viz/dataForSite/exportCsv/zeridealer.csv")
-#metDealerDf.to_csv("data_viz/dataForSite/exportCsv/metdealer.csv")
+zeriDealerDf.to_csv("data_viz/dataForSite/exportCsv/zeridealer.csv")
+metDealerDf.to_csv("data_viz/dataForSite/exportCsv/metdealer.csv")
 artworks.to_csv("data_viz/dataForSite/exportCsv/metartworks.csv")
