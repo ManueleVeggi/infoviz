@@ -65,8 +65,8 @@ function freqArray(arr) {
 
 // Create visualization
 
-function linedata() {
-    d3.csv("data_viz/dataForSite/exportCsv/metartworks.csv").then(drawViz);
+function freqartistdata() {
+    d3.csv("assets/dataForSite/exportCsv/metartworks.csv").then(drawViz);
 }
 
 function drawViz(rawData) {

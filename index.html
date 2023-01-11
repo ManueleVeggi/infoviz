@@ -17,7 +17,8 @@
   <!-- Charts -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  <script src="assets/js/graphs.js"></script>
+  <script src="assets/js/artistgraph.js"></script>
+  
 
 
   <meta charset="utf-8">
@@ -125,7 +126,7 @@
                   </div>
                   <div class="col-3">
                     <button type="button" class="btn btn-outline-danger"
-                      onclick="toggleDivViz('firstviz','frequentartist'); linedata();">WHAT?</button>
+                      onclick="toggleDivViz('firstviz','frequentartist'); freqartistdata();">WHAT?</button>
                   </div>
                   <div class="col-3">
                     <button type="button" class="btn btn-outline-danger">WHEN?</button>
@@ -189,16 +190,16 @@
                       </div>
                     </div>
 
-                    <p onclick="toggleDivViz('whatviz','chartvizwhat'); linedata();">SEE THE VISUALIZATION
+                    <p onclick="toggleDivViz('whatviz','chartvizwhat'); freqartistdata();">SEE THE VISUALIZATION
                       <!-- <i class="bi bi-arrow-right"></i>-->
                     </p>
 
                   </div>
 
                   <div class="whatviz" id="chartvizwhat">
-                    <div id="chart_div" style="width: 100%; margin-top: 2em;"></div>
+                    <div id="chart_div" style="width: 100%; margin-top: 1em;"></div>
 
-                    <p>SEE THE ARTISTS <i class="bi bi-arrow-right" onclick="toggleDivViz('whatviz','cardrow')"></i></p>
+                    <p onclick="toggleDivViz('whatviz','cardrow')" style="text-align: left; margin-top: 0.5em;">SEE THE ARTISTS</p>
 
                   </div>
 

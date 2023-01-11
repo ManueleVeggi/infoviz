@@ -5,7 +5,6 @@
 <head>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="assets/js/graphs.js"></script>
 </head>
 
 <body>
@@ -81,54 +80,29 @@
         // Create visualization
 
         function linedata() {
-            d3.csv("data_viz/dataForSite/exportCsv/metartworks.csv").then(drawViz);
+            d3.csv("assets/dataForSite/exportCsv/metartworks.csv").then(drawViz);
         }
 
-        function drawViz(rawData) {
+        function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Sales', 'Expenses'],
+          ['2004',  1000,      400],
+          ['2005',  1170,      460],
+          ['2006',  660,       1120],
+          ['2007',  1030,      540]
+        ]);
 
-            var arr = [
-                [
-                    "Artwork",
-                    "Artist",
-                    "Transfer"
-                ]
-            ]
+        var options = {
+          title: 'Company Performance',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
 
-            rawData.forEach(function (el) {
-                arr.push([
-                    el.Title,
-                    el.ArtistAlphaSort,
-                    el.lastTransfer
-                ])
-            })
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
 
-            var metData = freqArray(arr);
-
-            console.log(metData)
-
-            var data = google.visualization.arrayToDataTable(metData);
-
-            var options = {
-                title: 'Italian painting at MET: ',
-                hAxis: {
-                    title: 'Artist',
-                },
-                vAxis: {
-                    title: 'Occurrence in the collection',
-                    viewWindow:{
-                        max:25,
-                        min:0
-                    }
-                },
-                colors: ['red']
-            };
-
-            var chart = new google.visualization.ColumnChart(
-                document.getElementById('chart_div'));
-
-            chart.draw(data, options);
-        }
-    </script>
+        chart.draw(data, options);
+      }
+</script>
 </body>
 
 </html>
