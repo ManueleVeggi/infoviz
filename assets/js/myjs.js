@@ -23,7 +23,12 @@ function toggleDivViz(className, id) {
     }
     
     var toDisplay = document.getElementById(id);
-    toDisplay.style.display = "block"; 
+    if "row" in id {
+        toDisplay.style.display = "flex"
+    }
+    else {
+        toDisplay.style.display = "block"; 
+    }
     document.getElementById('vizheader').style.display = "none"; 
 
 }
