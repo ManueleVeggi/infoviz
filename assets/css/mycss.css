@@ -143,3 +143,7 @@ p {
     margin: auto;
     text-align: center;
 }
+
+.final {
+    transition: display .4s ease-in-out, visibility 0s .4s
+}

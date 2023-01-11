@@ -3,10 +3,15 @@ function toggleDiv(id) {
     for(var i = 0; i < myClass.length; i++) { 
         myClass[i].style.display='none'
     }
-      
-    document.getElementById(id).style.display = "block"; 
+    
+    var toDisplay = document.getElementById(id);
 
-    if (id=="finalmain") {
-        document.getElementById(id).style.marginTop = "9%";
+    if (id=='finalmain') {
+        location.reload
+        toDisplay.style.marginTop = "10%";
+        toDisplay.style.transform = "translateY(-4rem)";
     }
+
+    toDisplay.style.display = "block"; 
+
 }
