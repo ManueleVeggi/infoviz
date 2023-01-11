@@ -216,6 +216,11 @@ p {
     color: #ed0025;
 }
 
+.whatviz {
+    opacity: 0;
+    visibility: hidden;
+}
+
 .replicateTransition {
     opacity: 1;
     visibility: visible;
