@@ -1,4 +1,4 @@
-function toggleDiv(className, id) {
+function toggleDiv(className, id) { 
     var myClass = document.getElementsByClassName(className);
     for(var i = 0; i < myClass.length; i++) { 
         myClass[i].style.display='none'
