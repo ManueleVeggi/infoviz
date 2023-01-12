@@ -148,7 +148,7 @@ p {
     transition: display .4s ease-in-out, visibility 0s .4s
 }
 
-.firstviz, .whatviz:not(#cardrow) {
+.firstviz, .whatviz:not(#cardrow), .whoviz:not(#cardrowdealer) {
     display: none;
 }
 
@@ -158,6 +158,16 @@ p {
 
 .firstviz p {
     font-size: 1.2em;
+}
+
+.whatviz .slidevizcard, .whoviz .slidevizcard {
+    margin-top: 2em;
+    text-align: right;
+}
+
+.whatviz .slidevizcard:hover, .whoviz .slidevizcard:hover{
+    font-weight: bold;
+    color: #ed0025;
 }
 
 /* Card */
@@ -206,15 +216,13 @@ p {
     transform: rotateY(180deg);
   }
 
-.whatviz p:last-child {
-    margin-top: 2em;
-    text-align: right;
-}
+  .cardarrowmet {
+    color: white
+  }
 
-.whatviz p:last-child:hover {
-    font-weight: bold;
-    color: #ed0025;
-}
+  .cardarrowmet:hover {
+    color: white
+  }
 
 .btn-outline-danger {
     color: #ed0025;

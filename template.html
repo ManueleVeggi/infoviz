@@ -9,115 +9,62 @@
 
 <body>
 
-    <div id="linechart_material" style="height: 100%; margin: 0%"></div>
+    <div id="chart_dealer" style="height: 100%; margin: 0%"></div>
     <script>
         google.charts.load('current', {
             'packages': ['corechart']
         });
-        google.charts.setOnLoadCallback(linedata);
+        google.charts.setOnLoadCallback(dealerdata);
 
-        // Ancillary functions
-
-        function findOcc(arr, key) {
-            let arr2 = [];
-
-            arr.forEach((x) => {
-
-                // Checking if there is any object in arr2
-                // which contains the key value
-                if (arr2.some((val) => {
-                        return val[key] == x[key]
-                    })) {
-
-                    // If yes! then increase the occurrence by 1
-                    arr2.forEach((k) => {
-                        if (k[key] === x[key]) {
-                            k["occurrence"]++
-                        }
-                    })
-
-                } else {
-                    // If not! Then create a new object initialize 
-                    // it with the present iteration key's value and 
-                    // set the occurrence to 1
-                    let a = {}
-                    a[key] = x[key]
-                    a["occurrence"] = 1
-                    arr2.push(a);
-                }
-            })
-
-            return arr2
+        function dealerdata() {
+            d3.csv("assets/dataForSite/exportCsv/metdealer.csv").then(drawViz);
         }
 
-        function freqArray(arr) {
-            let arrList = []
-
-            arr.forEach((row) => {
-                arrList.push({
-                    artwork: row[0],
-                    year: parseInt(row[1])
-                })
-            })
-
-            arrList.shift();
-            
-            var finalData = [
-                [{type: 'string', label: 'Year'}, 'Number of Accessions']
-            ]
-
-            findOcc(arrList, "year").forEach((obj) => {
-                finalData.push(
-                    [obj["year"], obj["occurrence"]]
-                )
-            })
-
-            return finalData
-        }
-
-        // Create visualization
-
-        function linedata() {
-            d3.csv("assets/dataForSite/exportCsv/metartworks.csv").then(drawChart);
-        }
-
-        function drawChart(rawData) {
+        function drawViz(rawData) {
 
             var arr = [
                 [
-                    "Artwork",
-                    "Date"
+                    "Dealer",
+                    "Frequence"
                 ]
             ]
 
             rawData.forEach(function (el) {
                 arr.push([
-                    el.Title,
-                    parseInt(el.AccessionYear)
+                    el.dealer,
+                    parseInt(el.freq)             
                 ])
             })
 
-            var metData = freqArray(arr);
+            const metData = arr.sort((a, b) => b[1] - a[1])
 
-            const metSortedData = metData.sort((a, b) => a[0] - b[0])
+            console.log(metData)
 
-            console.log(metSortedData)
-
-            var data = google.visualization.arrayToDataTable(metSortedData);
-
+            var data = google.visualization.arrayToDataTable(metData.slice(0,13));
 
             var options = {
-                title: 'Accessions of Italian paintings at MET',
-                hAxis: {title: 'Year'},
-                vAxis: {title: 'Number of paintings accessioned'},
-                legend: 'none',
-                colors: ['red'],
+                title: 'Most recurrent Italian painter at MET',
+                hAxis: {
+                    title: 'Art dealer',
+                    slantedText: true,
+                    textStyle: {
+                        'fontSize': 9
+                    }
+                },
+                vAxis: {
+                    title: 'Occurrence in the collection',
+                    viewWindow: {
+                        max: 80,
+                        min: 0
+                    }
+                },
                 height: 400,
                 width: 1000,
+                legend: 'none',
+                colors: ['red']
             };
 
-            var chart = new google.visualization.LineChart(document.getElementById('linechart_material'));
-
+            var chart = new google.visualization.ColumnChart(document.getElementById('chart_dealer'));
             chart.draw(data, options);
         }
     </script>

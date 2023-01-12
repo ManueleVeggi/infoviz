@@ -100,7 +100,7 @@ function drawChart(rawData) {
         vAxis: {title: 'Number of paintings accessioned'},
         legend: 'none',
         colors: ['red'],
-        height: 400,
+        height: 350,
         width: 1000,
     };
 

@@ -107,7 +107,7 @@ function drawViz(rawData) {
                 min: 0
             }
         },
-        height: 400,
+        height: 350,
         width: 1000,
         legend: 'none',
         colors: ['red']

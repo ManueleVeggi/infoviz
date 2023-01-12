@@ -1,7 +1,6 @@
 google.charts.load('current', {
     'packages': ['corechart']
 });
-google.charts.setOnLoadCallback(bardata);
 
 // Ancillary functions
 
@@ -111,7 +110,7 @@ function drawBar(rawData) {
 
         legend: 'none',
         colors: ['red'],
-        height: 400,
+        height: 350,
         width: 1000,
     };
 

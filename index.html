@@ -120,13 +120,13 @@
                   </div>
                   <div class="col-3">
                     <button type="button" class="btn btn-outline-danger"
-                      onclick="toggleDivViz('firstviz','frequentartist'); ; toggleScrJS('jschartartist')">WHAT?</button>
+                      onclick="toggleDivViz('firstviz','frequentartist'); toggleScrJS('jschartartist')">WHAT?</button>
                   </div>
                   <div class="col-3">
                     <button type="button" class="btn btn-outline-danger" onclick="toggleDivViz('firstviz','accessionyear'); toggleScrJS('jschartdate'); linedata()">WHEN?</button>
                   </div>
                   <div class="col-3">
-                    <button type="button" class="btn btn-outline-danger" onclick="toggleDivViz('firstviz','accessiontypes'); toggleScrJS('jscharttype')">HOW?</button>
+                    <button type="button" class="btn btn-outline-danger" onclick="toggleDivViz('firstviz','accessiontypes'); toggleScrJS('jscharttype'); bardata()">HOW?</button>
                   </div>
                   <div class="col-12 mt-3" id="metfacade">
                     <img src="assets/img/metfacade.png" style="width: 600px; object-fit: contain;">
@@ -134,18 +134,77 @@
 
                 </div>
 
+                <!-- Art dealers -->
                 <div class="mt-4 firstviz" id="frequentdealer">
-                  <h4>Art Dealer: vedi tu dopo cosa mettere</h4>
-                  <p>The Metropolitan Museum hold 532 Italian paintings by almost three hundreds artists, ranging from Middle
-                    Ages to Nineteenth Century.</p>
-                  <h5>But who are the most represented artists of this collection?</h5>
+                  <h4>The hidden protagonists of the art world</h4>
+                  <p>More than one hunderd art dealers contributed to MET collections<sup onclick="alert('Gwynne Andrews is not reported among this card as no other information about him was found')">[1]</sup></p>
+                  <h5>But who are the most relevant actors?</h5>
+
+                  <div class="row mt-3 whoviz" id="cardrowdealer">
+
+                    <div class="col-4">
+                      <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="assets/img/friedsam.jpg" style="width:300px;height:300px;">
+                          </div>
+                          <div class="flip-card-back">
+                            <h1>Michael Friedsam</h1>
+                            <p>1860 - 1931</p>
+                            <p<>He was one of the first American art collector. At his death, he left his possession to the city of New Yorks and bequeathed several paintings to MET and Brooklyn Museum of Art</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-4">
+                      <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="assets/img/rogers.jpg" alt="Rogers" style="width:300px;height:300px;">
+                          </div>
+                          <div class="flip-card-back">
+                            <h1>Jacob S. Rogers</h1>
+                            <p>1824 - 1901</p>
+                            <p>He was an American businessman, who bequeathed at his death almost $8 milion to the MET. The museum still acquires art works in his name</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-4">
+                      <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/George_Blumenthal_circa_1920.jpg" alt="Blumenthal" style="width:300px;height:300px; object-position: right top;">
+                          </div>
+                          <div class="flip-card-back">
+                            <h1>George Blumenthal</h1>
+                            <p>1858 - 1941</p>
+                            <p>He was an art collector and the seventh president of the Metropolitan Museum of Art</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <p onclick="toggleDivViz('whoviz','chartvizwho'); dealerdata();" class="slidevizcard">SEE THE VISUALIZATION
+                    </p>
+
+                  </div>
+
+                  <div class="whoviz" id="chartvizwho">
+                    <div id="chart_dealer" style="height: 100%; margin: 0%"></div>
+
+                    <p onclick="toggleDivViz('whoviz','cardrowdealer')" class="slidevizcard" style="text-align: left; margin-top: 0.5em;">SEE THE DEALERS</p>
+
+                  </div>
                 </div>
 
+                <!-- Artists -->
                 <div class="mt-4 firstviz" id="frequentartist">
 
                   <h4>Five centuries of Italian art at MET</h4>
-                  <p>The Metropolitan Museum hold 532 Italian paintings by almost three hundreds artists, ranging from Middle
-                    Ages to Nineteenth Century.</p>
+                  <p>The Metropolitan Museum hold 532 Italian paintings by almost three hundreds artists, ranging <!--<br> from Middle Ages to Nineteenth Century.--></p>
                   <h5>But who are the most represented artists of this collection?</h5>
 
                   <div class="row mt-3 whatviz" id="cardrow">
@@ -157,9 +216,10 @@
                             <img src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/436600/796605/main-image" alt="Francesco Guardi, https://www.metmuseum.org/art/collection/search/436600?sortBy=ArtistMaker&amp;deptids=11&amp;when=A.D.+1600-1800&amp;showOnly=openAccess&amp;ft=Francesco+Guardi&amp;offset=0&amp;rpp=40&amp;pos=11" style="width:300px;height:300px;">
                           </div>
                           <div class="flip-card-back">
-                            <h1>John Doe</h1>
-                            <p>Architect & Engineer</p>
-                            <p<>We love that guy</p>
+                            <h1>Francesco Guardi</h1>
+                            <p>1712 - 1793</p>
+                            <p>He was a Venetian painter. His activity was mainly focused on landscape painting</p>
+                            <p><small><i>Venice: The Dogana and Santa Maria della Salute</i>, 1732 <a href="https://www.metmuseum.org/art/collection/search/436600?sortBy=ArtistMaker&amp;deptids=11&amp;when=A.D.+1600-1800&amp;showOnly=openAccess&amp;ft=Francesco+Guardi&amp;offset=0&amp;rpp=40&amp;pos=11" class="cardarrowmet"><i class="bi bi-arrow-right"></i></a></small></p>
                           </div>
                         </div>
                       </div>
@@ -172,9 +232,10 @@
                             <img src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/437790/1763008/main-image" alt="Tiepolo, https://www.metmuseum.org/it/art/collection/search/437790" style="width:300px;height:300px;">
                           </div>
                           <div class="flip-card-back">
-                            <h1>John Doe</h1>
-                            <p>Architect & Engineer</p>
-                            <p<>We love that guy</p>
+                            <h1>Giambattista Tiepolo</h1>
+                            <p>1712 - 1793</p>
+                            <p>He was one of the greatest painter in 18th century Venice and wonderfully decorated with frescoes churches and villas</p>
+                            <p><small><i>Allegoria dei pianeti e dei continenti</i>, 1752 <a href="https://www.metmuseum.org/it/art/collection/search/437790" class="cardarrowmet"><i class="bi bi-arrow-right"></i></a></small></p>
                           </div>
                         </div>
                       </div>
@@ -184,18 +245,20 @@
                       <div class="flip-card">
                         <div class="flip-card-inner">
                           <div class="flip-card-front">
-                            <img src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/436509/796325/main-image" alt="Giovanni di Paolo, https://www.metmuseum.org/art/collection/search/436509?sortBy=Relevance&amp;ft=Giovanni+di+Paolo+(Giovanni+di+Paolo+di+Grazia)&amp;offset=0&amp;rpp=40&amp;pos=13" style="width:300px;height:300px;">
+                            <img src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/436509/796325/main-image" alt="Giovanni di Paolo" style="width:300px;height:300px;">
                           </div>
                           <div class="flip-card-back">
-                            <h1>John Doe</h1>
-                            <p>Architect & Engineer</p>
-                            <p<>We love that guy</p>
+                            <h1>Giovanni di Paolo</h1>
+                            <p>1398 - 1793</p>
+                            <p>He was a Senese painter and was deeply influenced by the International Gothic</p>
+                            <p><small><i>The Adoration of the Magi</i>, 1460 <a href="https://www.metmuseum.org/art/collection/search/436509?sortBy=Relevance&amp;ft=Giovanni+di+Paolo+(Giovanni+di+Paolo+di+Grazia)&amp;offset=0&amp;rpp=40&amp;pos=13" class="cardarrowmet"><i class="bi bi-arrow-right"></i></a></small></p>
                           </div>
                         </div>
                       </div>
                     </div>
 
-                    <p onclick="toggleDivViz('whatviz','chartvizwhat'); freqartistdata();">SEE THE VISUALIZATION
+
+                    <p onclick="toggleDivViz('whatviz','chartvizwhat'); freqartistdata();" class="slidevizcard">SEE THE VISUALIZATION
                       <!-- <i class="bi bi-arrow-right"></i>-->
                     </p>
 
@@ -204,19 +267,21 @@
                   <div class="whatviz" id="chartvizwhat">
                     <div id="chart_div" style="width: 100%; margin-top: 1em;"></div>
 
-                    <p onclick="toggleDivViz('whatviz','cardrow')" style="text-align: left; margin-top: 0.5em;">SEE THE ARTISTS</p>
+                    <p onclick="toggleDivViz('whatviz','cardrow')" style="text-align: left; margin-top: 0.5em;" class="slidevizcard">SEE THE ARTISTS</p>
 
                   </div>
 
                 </div>
 
+                <!-- Accession year -->
                 <div class="mt-4 firstviz" id="accessionyear">
                   <h4>Since 1870, a cultural lighthouse for the US</h4>
                   <p>The Metropolitan Museum was founded in 1870 and immediately started collecting Italian paintings</p>
-                  <h5>Most of the artworks entered the collection between the Great Depression <br> and the Second World War</h5>
+                  <h5>Most of the artworks entered the collection between the Great Depression and WWII</h5>
                   <div id="linechart" style="height: 100%; margin: 0%" class="mt-4"></div>
                 </div>
 
+                <!-- Accession type -->
                 <div class="mt-4 firstviz" id="accessiontypes">
                   <h4>Art market, donors and collectors: an evolving collection</h4>
                   <p>A crucial activity for a museum is renew its collection, which can be done in different modalities</p>
