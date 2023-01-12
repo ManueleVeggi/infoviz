@@ -1,7 +1,9 @@
 google.charts.load('current', {
     'packages': ['corechart']
 });
-google.charts.setOnLoadCallback(linedata);
+google.charts.setOnLoadCallback(bardata);
+
+// Ancillary functions
 
 // Ancillary functions
 
@@ -43,68 +45,76 @@ function freqArray(arr) {
     arr.forEach((row) => {
         arrList.push({
             artwork: row[0],
-            year: parseInt(row[1])
+            accessiontype: row[1]
         })
     })
 
     arrList.shift();
 
     var finalData = [
-        ['Year', 'Number of Accessions']
+        ["Accession Type", "Frequence"]
     ]
 
-    findOcc(arrList, "year").forEach((obj) => {
+    findOcc(arrList, "accessiontype").forEach((obj) => {
         finalData.push(
-            [obj["year"], obj["occurrence"]]
+            [obj["accessiontype"], obj["occurrence"]]
         )
     })
+
+    console.log("Type")
 
     return finalData
 }
 
 // Create visualization
 
-function linedata() {
-    d3.csv("assets/dataForSite/exportCsv/metartworks.csv").then(drawChart);
+function bardata() {
+    d3.csv("assets/dataForSite/exportCsv/metartworks.csv").then(drawBar);
 }
 
-function drawChart(rawData) {
+function drawBar(rawData) {
 
     var arr = [
         [
             "Artwork",
-            "Date"
+            "AccessionType"
         ]
     ]
 
     rawData.forEach(function (el) {
-        arr.push([
-            el.Title,
-            parseInt(el.AccessionYear)
-        ])
+        if (el.lastTransfer != "") {
+            arr.push([
+                el.Title,
+                el.lastTransfer
+            ])
+        }
     })
 
     var metData = freqArray(arr);
 
-    const metSortedData = metData.sort((a, b) => a[0] - b[0])
-
-    console.log(metData);
+    //console.log(metData)
 
     var data = google.visualization.arrayToDataTable(metData);
 
-
     var options = {
-        title: 'House Prices vs Size',
+        title: 'MET, Italian painting: accession modalities',
+        chartArea: {
+            width: '50%'
+        },
         hAxis: {
-            title: 'Square Meters'
+            title: 'Occurrence',
+            minValue: 0
         },
         vAxis: {
-            title: 'Price in Millions'
+            title: 'Accession type'
         },
-        legend: 'none'
+
+        legend: 'none',
+        colors: ['red'],
+        height: 400,
+        width: 1000,
     };
 
-    var chart = new google.visualization.LineChart(document.getElementById('linechart_material'));
-
+    var chart = new google.visualization.BarChart(document.getElementById('chart_accession'));
     chart.draw(data, options);
 }

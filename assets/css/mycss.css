@@ -215,3 +215,13 @@ p {
     font-weight: bold;
     color: #ed0025;
 }
+
+.btn-outline-danger {
+    color: #ed0025;
+    border-color: #ed0025;
+}
+
+.btn-outline-danger:hover {
+    background-color: #ed0025;
+    border-color: #ed0025;
+}

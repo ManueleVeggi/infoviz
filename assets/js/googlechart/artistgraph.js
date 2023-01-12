@@ -56,7 +56,9 @@ function freqArray(arr) {
         finalData.push(
             [obj["artist"], obj["occurrence"]]
         )
-    })
+    }) 
+
+    console.log("Artists")
 
     return finalData
 }
@@ -88,8 +90,6 @@ function drawViz(rawData) {
     var metData = freqArray(arr);
 
     const metSortedData = metData.sort((a, b) => b[1] - a[1])
-
-    console.log(metSortedData)
 
     var data = google.visualization.arrayToDataTable(metSortedData.slice(0, 13));
 

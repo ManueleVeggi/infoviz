@@ -17,13 +17,11 @@
   <!-- Charts -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  <script src="assets/js/artistgraph.js"></script>
-  <script src="assets/js/accessionline.js"></script>
-  
-  <!--
-  <script src="assets/js/accessiontype.js"></script>
-  <script src="assets/js/dealergraph.js"></script>
-  -->
+
+  <script src="assets/js/googlechart/artistgraph.js" class="myjsgooglechart" id="jschartartist"></script>
+  <script src="assets/js/googlechart/accessionline.js" class="myjsgooglechart" id="jschartdate"></script>
+  <script src="assets/js/googlechart/accessiontype.js" class="myjsgooglechart" id="jscharttype"></script>
+  <script src="assets/js/googlechart/dealergraph.js" class="myjsgooglechart" id="jschartdealer"></script>
 
 
 
@@ -112,27 +110,36 @@
               <div class="work" style="text-align: center;">
                 <span id="vizheader">
                   <h2>Unique stories of an art collection</h2>
-                  <h4 class="mb-5">Each artwork can tell us an inimitable stories, <br> where art and commerce converge
+                  <h4 class="mb-3">Each artwork can tell us an inimitable stories, <br> where art and commerce converge
                   </h4>
                 </span>
 
                 <div class="row">
                   <div class="col-3">
-                    <button type="button" class="btn btn-outline-danger" onclick="toggleDivViz('firstviz','frequentdealer')">WHO?</button>
+                    <button type="button" class="btn btn-outline-danger" onclick="toggleDivViz('firstviz','frequentdealer'); toggleScrJS('jschartdealer')">WHO?</button>
                   </div>
                   <div class="col-3">
                     <button type="button" class="btn btn-outline-danger"
-                      onclick="toggleDivViz('firstviz','frequentartist')">WHAT?</button>
+                      onclick="toggleDivViz('firstviz','frequentartist'); ; toggleScrJS('jschartartist')">WHAT?</button>
                   </div>
                   <div class="col-3">
-                    <button type="button" class="btn btn-outline-danger" onclick="toggleDivViz('firstviz','accessionyear')">WHEN?</button>
+                    <button type="button" class="btn btn-outline-danger" onclick="toggleDivViz('firstviz','accessionyear'); toggleScrJS('jschartdate'); linedata()">WHEN?</button>
                   </div>
                   <div class="col-3">
-                    <button type="button" class="btn btn-outline-danger" onclick="toggleDivViz('firstviz','accessiontypes')">HOW?</button>
+                    <button type="button" class="btn btn-outline-danger" onclick="toggleDivViz('firstviz','accessiontypes'); toggleScrJS('jscharttype')">HOW?</button>
                   </div>
+                  <div class="col-12 mt-3" id="metfacade">
+                    <img src="assets/img/metfacade.png" style="width: 600px; object-fit: contain;">
+                  </div>
+
                 </div>
 
-                <div class="mt-4 firstviz" id="frequentdealer"></div>
+                <div class="mt-4 firstviz" id="frequentdealer">
+                  <h4>Art Dealer: vedi tu dopo cosa mettere</h4>
+                  <p>The Metropolitan Museum hold 532 Italian paintings by almost three hundreds artists, ranging from Middle
+                    Ages to Nineteenth Century.</p>
+                  <h5>But who are the most represented artists of this collection?</h5>
+                </div>
 
                 <div class="mt-4 firstviz" id="frequentartist">
 
@@ -203,9 +210,20 @@
 
                 </div>
 
-                <div class="mt-4 firstviz" id="accessionyear"></div>
+                <div class="mt-4 firstviz" id="accessionyear">
+                  <h4>Since 1870, a cultural lighthouse for the US</h4>
+                  <p>The Metropolitan Museum was founded in 1870 and immediately started collecting Italian paintings</p>
+                  <h5>Most of the artworks entered the collection between the Great Depression <br> and the Second World War</h5>
+                  <div id="linechart" style="height: 100%; margin: 0%" class="mt-4"></div>
+                </div>
 
-                <div class="mt-4 firstviz" id="accessiontypes"></div>
+                <div class="mt-4 firstviz" id="accessiontypes">
+                  <h4>Art market, donors and collectors: an evolving collection</h4>
+                  <p>A crucial activity for a museum is renew its collection, which can be done in different modalities</p>
+                  <h5>MET often accessions new musealia directly through the art market and donations</h5>
+
+                  <div id="chart_accession" style="height: 100%; margin: 0%" class="mt-4"></div>
+                </div>
 
               </div>
             </li>
