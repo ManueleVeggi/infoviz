@@ -1,6 +1,7 @@
 google.charts.load('current', {
-    packages: ['corechart', 'bar']
+    'packages': ['corechart']
 });
+google.charts.setOnLoadCallback(linedata);
 
 // Ancillary functions
 
@@ -42,19 +43,19 @@ function freqArray(arr) {
     arr.forEach((row) => {
         arrList.push({
             artwork: row[0],
-            artist: row[1]
+            year: parseInt(row[1])
         })
     })
 
     arrList.shift();
 
     var finalData = [
-        ["Artist", "Frequence"]
+        ['Year', 'Number of Accessions']
     ]
 
-    findOcc(arrList, "artist").forEach((obj) => {
+    findOcc(arrList, "year").forEach((obj) => {
         finalData.push(
-            [obj["artist"], obj["occurrence"]]
+            [obj["year"], obj["occurrence"]]
         )
     })
 
@@ -63,56 +64,47 @@ function freqArray(arr) {
 
 // Create visualization
 
-function freqartistdata() {
-    d3.csv("assets/dataForSite/exportCsv/metartworks.csv").then(drawViz);
+function linedata() {
+    d3.csv("assets/dataForSite/exportCsv/metartworks.csv").then(drawChart);
 }
 
-function drawViz(rawData) {
+function drawChart(rawData) {
 
     var arr = [
         [
             "Artwork",
-            "Artist",
-            "Transfer"
+            "Date"
         ]
     ]
 
     rawData.forEach(function (el) {
         arr.push([
             el.Title,
-            el.ArtistAlphaSort,
-            el.AccessionYear
+            parseInt(el.AccessionYear)
         ])
     })
 
     var metData = freqArray(arr);
 
-    const metSortedData = metData.sort((a, b) => b[1] - a[1])
+    const metSortedData = metData.sort((a, b) => a[0] - b[0])
 
-    console.log(metSortedData)
+    console.log(metData);
 
-    var data = google.visualization.arrayToDataTable(metSortedData.slice(0, 13));
+    var data = google.visualization.arrayToDataTable(metData);
+
 
     var options = {
-        title: 'Most recurrent Italian painter at MET',
+        title: 'House Prices vs Size',
         hAxis: {
-            title: 'Artists',
-            slantedText: true,
-            textStyle: {'fontSize': 9}
+            title: 'Square Meters'
         },
         vAxis: {
-            title: 'Occurrence in the collection',
-            viewWindow: {
-                max: 25,
-                min: 0
-            }
+            title: 'Price in Millions'
         },
-        height: 400,
-        width: 1000,
-        legend: 'none',
-        colors: ['red']
+        legend: 'none'
     };
 
-    var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+    var chart = new google.visualization.LineChart(document.getElementById('linechart_material'));
+
     chart.draw(data, options);
 }

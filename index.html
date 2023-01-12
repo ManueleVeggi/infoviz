@@ -18,7 +18,13 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script src="assets/js/artistgraph.js"></script>
+  <script src="assets/js/accessionline.js"></script>
   
+  <!--
+  <script src="assets/js/accessiontype.js"></script>
+  <script src="assets/js/dealergraph.js"></script>
+  -->
+
 
 
   <meta charset="utf-8">
@@ -34,16 +40,6 @@
 </head>
 
 <body>
-
-  <!-- notification for small viewports and landscape oriented smartphones -->
-  <div class="device-notification">
-    <a class="device-notification--logo" href="#0">
-      <img src="assets/img/logo.png" alt="Global">
-      <p>Global</p>
-    </a>
-    <p class="device-notification--message">Global has so much to offer that we must request you orient your device to
-      portrait or find a larger screen. You won't be disappointed.</p>
-  </div>
 
   <div class="perspective effect-rotate-left">
     <div class="container">
@@ -122,24 +118,26 @@
 
                 <div class="row">
                   <div class="col-3">
-                    <button type="button" class="btn btn-outline-danger">WHO?</button>
+                    <button type="button" class="btn btn-outline-danger" onclick="toggleDivViz('firstviz','frequentdealer')">WHO?</button>
                   </div>
                   <div class="col-3">
                     <button type="button" class="btn btn-outline-danger"
-                      onclick="toggleDivViz('firstviz','frequentartist'); freqartistdata();">WHAT?</button>
+                      onclick="toggleDivViz('firstviz','frequentartist')">WHAT?</button>
                   </div>
                   <div class="col-3">
-                    <button type="button" class="btn btn-outline-danger">WHEN?</button>
+                    <button type="button" class="btn btn-outline-danger" onclick="toggleDivViz('firstviz','accessionyear')">WHEN?</button>
                   </div>
                   <div class="col-3">
-                    <button type="button" class="btn btn-outline-danger">HOW?</button>
+                    <button type="button" class="btn btn-outline-danger" onclick="toggleDivViz('firstviz','accessiontypes')">HOW?</button>
                   </div>
                 </div>
+
+                <div class="mt-4 firstviz" id="frequentdealer"></div>
 
                 <div class="mt-4 firstviz" id="frequentartist">
 
                   <h4>Five centuries of Italian art at MET</h4>
-                  <p>The Metropolitan Museum hold more than 480 Italian paintings by 116 artists, ranging from Middle
+                  <p>The Metropolitan Museum hold 532 Italian paintings by almost three hundreds artists, ranging from Middle
                     Ages to Nineteenth Century.</p>
                   <h5>But who are the most represented artists of this collection?</h5>
 
@@ -204,6 +202,10 @@
                   </div>
 
                 </div>
+
+                <div class="mt-4 firstviz" id="accessionyear"></div>
+
+                <div class="mt-4 firstviz" id="accessiontypes"></div>
 
               </div>
             </li>

@@ -9,10 +9,10 @@
 
 <body>
 
-    <div id="chart_div" style="height: 100%; margin: 0%"></div>
+    <div id="linechart_material" style="height: 100%; margin: 0%"></div>
     <script>
         google.charts.load('current', {
-            packages: ['corechart', 'bar']
+            'packages': ['corechart']
         });
         google.charts.setOnLoadCallback(linedata);
 
@@ -56,22 +56,20 @@
             arr.forEach((row) => {
                 arrList.push({
                     artwork: row[0],
-                    artist: row[1]
+                    year: parseInt(row[1])
                 })
             })
 
             arrList.shift();
-
+            
             var finalData = [
-                ["Artist", "Frequence"]
+                [{type: 'string', label: 'Year'}, 'Number of Accessions']
             ]
 
-            findOcc(arrList, "artist").forEach((obj) => {
-                if (obj["occurrence"] > 1) {
-                    finalData.push(
-                        [obj["artist"], obj["occurrence"]]
-                    )
-                }
+            findOcc(arrList, "year").forEach((obj) => {
+                finalData.push(
+                    [obj["year"], obj["occurrence"]]
+                )
             })
 
             return finalData
@@ -80,29 +78,49 @@
         // Create visualization
 
         function linedata() {
-            d3.csv("assets/dataForSite/exportCsv/metartworks.csv").then(drawViz);
+            d3.csv("assets/dataForSite/exportCsv/metartworks.csv").then(drawChart);
         }
 
-        function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Year', 'Sales', 'Expenses'],
-          ['2004',  1000,      400],
-          ['2005',  1170,      460],
-          ['2006',  660,       1120],
-          ['2007',  1030,      540]
-        ]);
+        function drawChart(rawData) {
 
-        var options = {
-          title: 'Company Performance',
-          curveType: 'function',
-          legend: { position: 'bottom' }
-        };
+            var arr = [
+                [
+                    "Artwork",
+                    "Date"
+                ]
+            ]
 
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+            rawData.forEach(function (el) {
+                arr.push([
+                    el.Title,
+                    parseInt(el.AccessionYear)
+                ])
+            })
 
-        chart.draw(data, options);
-      }
-</script>
+            var metData = freqArray(arr);
+
+            const metSortedData = metData.sort((a, b) => a[0] - b[0])
+
+            console.log(metSortedData)
+
+            var data = google.visualization.arrayToDataTable(metSortedData);
+
+
+            var options = {
+                title: 'Accessions of Italian paintings at MET',
+                hAxis: {title: 'Year'},
+                vAxis: {title: 'Number of paintings accessioned'},
+                legend: 'none',
+                colors: ['red'],
+                height: 400,
+                width: 1000,
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('linechart_material'));
+
+            chart.draw(data, options);
+        }
+    </script>
 </body>
 
 </html>
