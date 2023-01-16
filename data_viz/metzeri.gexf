@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2023-01-13">
+    <creator>NetworkX 3.0</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="The Metropolitan Museum of Art" label="The Metropolitan Museum of Art" />
+      <node id="Collezione B. Altman" label="Collezione B. Altman" />
+      <node id=" Collezione H.G. Sperling" label=" Collezione H.G. Sperling" />
+      <node id=" Kleinberger Galleries" label=" Kleinberger Galleries" />
+      <node id=" Collezione O. Wertheimer" label=" Collezione O. Wertheimer" />
+      <node id=" collezione Chalandon" label=" collezione Chalandon" />
+      <node id=" Asta Christie's" label=" Asta Christie's" />
+      <node id=" collezione Earl of Harewood" label=" collezione Earl of Harewood" />
+      <node id=" P. Corsini" label=" P. Corsini" />
+      <node id=" Collezione S. Brunswick" label=" Collezione S. Brunswick" />
+      <node id=" Hammer Galleries" label=" Hammer Galleries" />
+      <node id=" Chiesa del SS. Nome di Gesù" label=" Chiesa del SS. Nome di Gesù" />
+      <node id=" Collezione J. Pierpont Morgan" label=" Collezione J. Pierpont Morgan" />
+      <node id=" Collezioni reali" label=" Collezioni reali" />
+      <node id=" Collezione Colonna" label=" Collezione Colonna" />
+      <node id=" Convento di S. Antonio da Padova" label=" Convento di S. Antonio da Padova" />
+      <node id="Collezione G. e F. Blumenthal" label="Collezione G. e F. Blumenthal" />
+      <node id=" Collezione J.H. Harding" label=" Collezione J.H. Harding" />
+      <node id=" Collezione J.E. Taylor" label=" Collezione J.E. Taylor" />
+      <node id="Collezione J.S. Bache" label="Collezione J.S. Bache" />
+      <node id=" Knoedler and Co." label=" Knoedler and Co." />
+      <node id=" E. Volpi" label=" E. Volpi" />
+      <node id=" Collezione Fassati" label=" Collezione Fassati" />
+      <node id=" Collezione Stillman" label=" Collezione Stillman" />
+      <node id=" Asta Galerie Georges Petit" label=" Asta Galerie Georges Petit" />
+      <node id=" Collezione B. Crespi" label=" Collezione B. Crespi" />
+      <node id="Collezione Linsky" label="Collezione Linsky" />
+      <node id="Dowdeswell &amp; Dowdeswell" label="Dowdeswell &amp; Dowdeswell" />
+      <node id=" Collezione colonnello Sacchetti" label=" Collezione colonnello Sacchetti" />
+      <node id=" Oratorio di S. Maria Maddalena all'Isola" label=" Oratorio di S. Maria Maddalena all'Isola" />
+      <node id="Mercato antiquario" label="Mercato antiquario" />
+      <node id=" Collezione Mr. e Mrs. C.B. Wrightsman" label=" Collezione Mr. e Mrs. C.B. Wrightsman" />
+      <node id=" Asta Sotheby's" label=" Asta Sotheby's" />
+      <node id=" Collezione Mrs. C. Segal" label=" Collezione Mrs. C. Segal" />
+      <node id=" Morandotti" label=" Morandotti" />
+      <node id=" Inc." label=" Inc." />
+      <node id=" F. Mont" label=" F. Mont" />
+      <node id=" Galleria Fleischmann" label=" Galleria Fleischmann" />
+      <node id=" collezione duca del Devonshire" label=" collezione duca del Devonshire" />
+      <node id="Asta Christie's" label="Asta Christie's" />
+      <node id=" Collezione Friedsam" label=" Collezione Friedsam" />
+      <node id="Collezione J. Pierpont Morgan" label="Collezione J. Pierpont Morgan" />
+      <node id="Collezione R. Lehman" label="Collezione R. Lehman" />
+      <node id="Matthiesen" label="Matthiesen" />
+      <node id="P. Corsini" label="P. Corsini" />
+    </nodes>
+    <edges>
+      <edge source="The Metropolitan Museum of Art" target="Collezione B. Altman" id="0" />
+      <edge source="The Metropolitan Museum of Art" target=" Collezione H.G. Sperling" id="1" />
+      <edge source="The Metropolitan Museum of Art" target=" Asta Christie's" id="2" />
+      <edge source="The Metropolitan Museum of Art" target=" P. Corsini" id="3" />
+      <edge source="The Metropolitan Museum of Art" target=" Collezione J. Pierpont Morgan" id="4" />
+      <edge source="The Metropolitan Museum of Art" target="Collezione G. e F. Blumenthal" id="5" />
+      <edge source="The Metropolitan Museum of Art" target=" Collezione J.H. Harding" id="6" />
+      <edge source="The Metropolitan Museum of Art" target="Collezione J.S. Bache" id="7" />
+      <edge source="The Metropolitan Museum of Art" target=" Knoedler and Co." id="8" />
+      <edge source="The Metropolitan Museum of Art" target=" Collezione Stillman" id="9" />
+      <edge source="The Metropolitan Museum of Art" target="Collezione Linsky" id="10" />
+      <edge source="The Metropolitan Museum of Art" target="Dowdeswell &amp; Dowdeswell" id="11" />
+      <edge source="The Metropolitan Museum of Art" target=" Collezione colonnello Sacchetti" id="12" />
+      <edge source="The Metropolitan Museum of Art" target="Mercato antiquario" id="13" />
+      <edge source="The Metropolitan Museum of Art" target=" Collezione Mr. e Mrs. C.B. Wrightsman" id="14" />
+      <edge source="The Metropolitan Museum of Art" target=" Inc." id="15" />
+      <edge source="The Metropolitan Museum of Art" target=" F. Mont" id="16" />
+      <edge source="The Metropolitan Museum of Art" target="Asta Christie's" id="17" />
+      <edge source="The Metropolitan Museum of Art" target=" Collezione Friedsam" id="18" />
+      <edge source="The Metropolitan Museum of Art" target="Collezione J. Pierpont Morgan" id="19" />
+      <edge source="The Metropolitan Museum of Art" target="Collezione R. Lehman" id="20" />
+      <edge source="The Metropolitan Museum of Art" target="Matthiesen" id="21" />
+      <edge source="The Metropolitan Museum of Art" target="P. Corsini" id="22" />
+      <edge source=" Collezione H.G. Sperling" target=" Kleinberger Galleries" id="23" />
+      <edge source=" Collezione H.G. Sperling" target=" Asta Christie's" id="24" />
+      <edge source=" Kleinberger Galleries" target=" Collezione O. Wertheimer" id="25" />
+      <edge source=" Kleinberger Galleries" target=" Collezione H.G. Sperling" id="26" />
+      <edge source=" Collezione O. Wertheimer" target=" collezione Chalandon" id="27" />
+      <edge source=" Asta Christie's" target=" collezione Earl of Harewood" id="28" />
+      <edge source=" Asta Christie's" target=" Collezione J.E. Taylor" id="29" />
+      <edge source=" Asta Christie's" target=" collezione duca del Devonshire" id="30" />
+      <edge source=" P. Corsini" target=" Collezione S. Brunswick" id="31" />
+      <edge source=" Collezione S. Brunswick" target=" Hammer Galleries" id="32" />
+      <edge source=" Hammer Galleries" target=" Chiesa del SS. Nome di Gesù" id="33" />
+      <edge source=" Collezione J. Pierpont Morgan" target=" Collezioni reali" id="34" />
+      <edge source=" Collezioni reali" target=" Collezione Colonna" id="35" />
+      <edge source=" Collezione Colonna" target=" Convento di S. Antonio da Padova" id="36" />
+      <edge source=" Collezione J.H. Harding" target=" Asta Christie's" id="37" />
+      <edge source=" Knoedler and Co." target=" E. Volpi" id="38" />
+      <edge source=" E. Volpi" target=" Collezione Fassati" id="39" />
+      <edge source=" Collezione Stillman" target=" Asta Galerie Georges Petit" id="40" />
+      <edge source=" Asta Galerie Georges Petit" target=" Collezione B. Crespi" id="41" />
+      <edge source=" Collezione colonnello Sacchetti" target=" Oratorio di S. Maria Maddalena all'Isola" id="42" />
+      <edge source=" Collezione Mr. e Mrs. C.B. Wrightsman" target=" Asta Sotheby's" id="43" />
+      <edge source=" Asta Sotheby's" target=" Collezione Mrs. C. Segal" id="44" />
+      <edge source=" Collezione Mrs. C. Segal" target=" Morandotti" id="45" />
+      <edge source=" F. Mont" target=" Galleria Fleischmann" id="46" />
+      <edge source=" Galleria Fleischmann" target=" Kleinberger Galleries" id="47" />
+      <edge source=" Collezione Friedsam" target=" Asta Galerie Georges Petit" id="48" />
+    </edges>
+  </graph>
+</gexf>

@@ -28,7 +28,7 @@ function drawVizDealer(rawData) {
     var data = google.visualization.arrayToDataTable(metData.slice(0, 13));
 
     var options = {
-        title: 'Most recurrent Italian painter at MET',
+        title: 'Most relevant art dealers for the creation of MET collection',
         hAxis: {
             title: 'Art dealer',
             slantedText: true,
