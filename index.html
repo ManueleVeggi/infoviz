@@ -3,6 +3,13 @@
 
 <head>
   <title>Nice to MET you!</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Template: https://github.com/BuckyMaler/global.git">
+  <meta name="author" content="Manuele Veggi">
+
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -21,19 +28,16 @@
   <script src="assets/js/googlechart/artistgraph.js" class="myjsgooglechart" id="jschartartist"></script>
   <script src="assets/js/googlechart/accessionline.js" class="myjsgooglechart" id="jschartdate"></script>
   <script src="assets/js/googlechart/accessiontype.js" class="myjsgooglechart" id="jscharttype"></script>
-  <script src="assets/js/googlechart/dealergraph.js" class="myjsgooglechart" id="jschartdealer"></script>
+  <l src="assets/js/googlechart/dealergraph.js" class="myjsgooglechart" id="jschartdealer">
+    </script>
 
+    <!-- Leaflet img -->
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css">
+    </link>
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Template: https://github.com/BuckyMaler/global.git">
-  <meta name="author" content="Manuele Veggi">
-
-
-  <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="stylesheet" href="assets/css/mycss.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/mycss.css">
 
 </head>
 
@@ -116,17 +120,20 @@
 
                 <div class="row">
                   <div class="col-3">
-                    <button type="button" class="btn btn-outline-danger" onclick="toggleDivViz('firstviz','frequentdealer'); toggleScrJS('jschartdealer')">WHO?</button>
+                    <button type="button" class="btn btn-outline-danger"
+                      onclick="toggleDivViz('firstviz','frequentdealer'); toggleScrJS('jschartdealer')">WHO?</button>
                   </div>
                   <div class="col-3">
                     <button type="button" class="btn btn-outline-danger"
                       onclick="toggleDivViz('firstviz','frequentartist'); toggleScrJS('jschartartist')">WHAT?</button>
                   </div>
                   <div class="col-3">
-                    <button type="button" class="btn btn-outline-danger" onclick="toggleDivViz('firstviz','accessionyear'); toggleScrJS('jschartdate'); linedata()">WHEN?</button>
+                    <button type="button" class="btn btn-outline-danger"
+                      onclick="toggleDivViz('firstviz','accessionyear'); toggleScrJS('jschartdate'); linedata()">WHEN?</button>
                   </div>
                   <div class="col-3">
-                    <button type="button" class="btn btn-outline-danger" onclick="toggleDivViz('firstviz','accessiontypes'); toggleScrJS('jscharttype'); bardata()">HOW?</button>
+                    <button type="button" class="btn btn-outline-danger"
+                      onclick="toggleDivViz('firstviz','accessiontypes'); toggleScrJS('jscharttype'); bardata()">HOW?</button>
                   </div>
                   <div class="col-12 mt-3" id="metfacade">
                     <img src="assets/img/metfacade.png" style="width: 600px; object-fit: contain;">
@@ -137,7 +144,9 @@
                 <!-- Art dealers -->
                 <div class="mt-4 firstviz" id="frequentdealer">
                   <h4>The hidden protagonists of the art world</h4>
-                  <p>More than one hunderd art dealers contributed to MET collections<sup onclick="alert('Gwynne Andrews is not reported among this card as no other information about him was found')">[1]</sup></p>
+                  <p>More than one hunderd art dealers contributed to MET collections<sup
+                      onclick="alert('Gwynne Andrews is not reported among this card as no other information about him was found')">[1]</sup>
+                  </p>
                   <h5>But who are the most relevant actors?</h5>
 
                   <div class="row mt-3 whoviz" id="cardrowdealer">
@@ -151,7 +160,9 @@
                           <div class="flip-card-back">
                             <h1>Michael Friedsam</h1>
                             <p>1860 - 1931</p>
-                            <p<>He was one of the first American art collector. At his death, he left his possession to the city of New Yorks and bequeathed several paintings to MET and Brooklyn Museum of Art</p>
+                            <p<>He was one of the first American art collector. At his death, he left his possession to
+                              the city of New Yorks and bequeathed several paintings to MET and Brooklyn Museum of Art
+                              </p>
                           </div>
                         </div>
                       </div>
@@ -166,7 +177,8 @@
                           <div class="flip-card-back">
                             <h1>Jacob S. Rogers</h1>
                             <p>1824 - 1901</p>
-                            <p>He was an American businessman, who bequeathed at his death almost $8 milion to the MET. The museum still acquires art works in his name</p>
+                            <p>He was an American businessman, who bequeathed at his death almost $8 milion to the MET.
+                              The museum still acquires art works in his name</p>
                           </div>
                         </div>
                       </div>
@@ -176,7 +188,9 @@
                       <div class="flip-card">
                         <div class="flip-card-inner">
                           <div class="flip-card-front">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/George_Blumenthal_circa_1920.jpg" alt="Blumenthal" style="width:300px;height:300px; object-position: right top;">
+                            <img
+                              src="https://upload.wikimedia.org/wikipedia/commons/8/87/George_Blumenthal_circa_1920.jpg"
+                              alt="Blumenthal" style="width:300px;height:300px; object-position: right top;">
                           </div>
                           <div class="flip-card-back">
                             <h1>George Blumenthal</h1>
@@ -187,7 +201,8 @@
                       </div>
                     </div>
 
-                    <p onclick="toggleDivViz('whoviz','chartvizwho'); dealerdata();" class="slidevizcard">SEE THE VISUALIZATION
+                    <p onclick="toggleDivViz('whoviz','chartvizwho'); dealerdata();" class="slidevizcard">SEE THE
+                      VISUALIZATION
                     </p>
 
                   </div>
@@ -195,7 +210,8 @@
                   <div class="whoviz" id="chartvizwho">
                     <div id="chart_dealer" style="height: 100%; margin: 0%"></div>
 
-                    <p onclick="toggleDivViz('whoviz','cardrowdealer')" class="slidevizcard" style="text-align: left; margin-top: 0.5em;">SEE THE DEALERS</p>
+                    <p onclick="toggleDivViz('whoviz','cardrowdealer')" class="slidevizcard"
+                      style="text-align: left; margin-top: 0.5em;">SEE THE DEALERS</p>
 
                   </div>
                 </div>
@@ -204,7 +220,9 @@
                 <div class="mt-4 firstviz" id="frequentartist">
 
                   <h4>Five centuries of Italian art at MET</h4>
-                  <p>The Metropolitan Museum hold 532 Italian paintings by almost three hundreds artists, ranging <!--<br> from Middle Ages to Nineteenth Century.--></p>
+                  <p>The Metropolitan Museum hold 532 Italian paintings by almost three hundreds artists, ranging
+                    <!--<br> from Middle Ages to Nineteenth Century.-->
+                  </p>
                   <h5>But who are the most represented artists of this collection?</h5>
 
                   <div class="row mt-3 whatviz" id="cardrow">
@@ -213,13 +231,18 @@
                       <div class="flip-card">
                         <div class="flip-card-inner">
                           <div class="flip-card-front">
-                            <img src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/436600/796605/main-image" alt="Francesco Guardi, https://www.metmuseum.org/art/collection/search/436600?sortBy=ArtistMaker&amp;deptids=11&amp;when=A.D.+1600-1800&amp;showOnly=openAccess&amp;ft=Francesco+Guardi&amp;offset=0&amp;rpp=40&amp;pos=11" style="width:300px;height:300px;">
+                            <img
+                              src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/436600/796605/main-image"
+                              alt="Francesco Guardi, https://www.metmuseum.org/art/collection/search/436600?sortBy=ArtistMaker&amp;deptids=11&amp;when=A.D.+1600-1800&amp;showOnly=openAccess&amp;ft=Francesco+Guardi&amp;offset=0&amp;rpp=40&amp;pos=11"
+                              style="width:300px;height:300px;">
                           </div>
                           <div class="flip-card-back">
                             <h1>Francesco Guardi</h1>
                             <p>1712 - 1793</p>
                             <p>He was a Venetian painter. His activity was mainly focused on landscape painting</p>
-                            <p><small><i>Venice: The Dogana and Santa Maria della Salute</i>, 1732 <a href="https://www.metmuseum.org/art/collection/search/436600?sortBy=ArtistMaker&amp;deptids=11&amp;when=A.D.+1600-1800&amp;showOnly=openAccess&amp;ft=Francesco+Guardi&amp;offset=0&amp;rpp=40&amp;pos=11" class="cardarrowmet"><i class="bi bi-arrow-right"></i></a></small></p>
+                            <p><small><i>Venice: The Dogana and Santa Maria della Salute</i>, 1732 <a
+                                  href="https://www.metmuseum.org/art/collection/search/436600?sortBy=ArtistMaker&amp;deptids=11&amp;when=A.D.+1600-1800&amp;showOnly=openAccess&amp;ft=Francesco+Guardi&amp;offset=0&amp;rpp=40&amp;pos=11"
+                                  class="cardarrowmet"><i class="bi bi-arrow-right"></i></a></small></p>
                           </div>
                         </div>
                       </div>
@@ -229,13 +252,19 @@
                       <div class="flip-card">
                         <div class="flip-card-inner">
                           <div class="flip-card-front">
-                            <img src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/437790/1763008/main-image" alt="Tiepolo, https://www.metmuseum.org/it/art/collection/search/437790" style="width:300px;height:300px;">
+                            <img
+                              src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/437790/1763008/main-image"
+                              alt="Tiepolo, https://www.metmuseum.org/it/art/collection/search/437790"
+                              style="width:300px;height:300px;">
                           </div>
                           <div class="flip-card-back">
                             <h1>Giambattista Tiepolo</h1>
                             <p>1712 - 1793</p>
-                            <p>He was one of the greatest painter in 18th century Venice and wonderfully decorated with frescoes churches and villas</p>
-                            <p><small><i>Allegoria dei pianeti e dei continenti</i>, 1752 <a href="https://www.metmuseum.org/it/art/collection/search/437790" class="cardarrowmet"><i class="bi bi-arrow-right"></i></a></small></p>
+                            <p>He was one of the greatest painter in 18th century Venice and wonderfully decorated with
+                              frescoes churches and villas</p>
+                            <p><small><i>Allegoria dei pianeti e dei continenti</i>, 1752 <a
+                                  href="https://www.metmuseum.org/it/art/collection/search/437790"
+                                  class="cardarrowmet"><i class="bi bi-arrow-right"></i></a></small></p>
                           </div>
                         </div>
                       </div>
@@ -245,20 +274,25 @@
                       <div class="flip-card">
                         <div class="flip-card-inner">
                           <div class="flip-card-front">
-                            <img src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/436509/796325/main-image" alt="Giovanni di Paolo" style="width:300px;height:300px;">
+                            <img
+                              src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/436509/796325/main-image"
+                              alt="Giovanni di Paolo" style="width:300px;height:300px;">
                           </div>
                           <div class="flip-card-back">
                             <h1>Giovanni di Paolo</h1>
                             <p>1398 - 1793</p>
                             <p>He was a Senese painter and was deeply influenced by the International Gothic</p>
-                            <p><small><i>The Adoration of the Magi</i>, 1460 <a href="https://www.metmuseum.org/art/collection/search/436509?sortBy=Relevance&amp;ft=Giovanni+di+Paolo+(Giovanni+di+Paolo+di+Grazia)&amp;offset=0&amp;rpp=40&amp;pos=13" class="cardarrowmet"><i class="bi bi-arrow-right"></i></a></small></p>
+                            <p><small><i>The Adoration of the Magi</i>, 1460 <a
+                                  href="https://www.metmuseum.org/art/collection/search/436509?sortBy=Relevance&amp;ft=Giovanni+di+Paolo+(Giovanni+di+Paolo+di+Grazia)&amp;offset=0&amp;rpp=40&amp;pos=13"
+                                  class="cardarrowmet"><i class="bi bi-arrow-right"></i></a></small></p>
                           </div>
                         </div>
                       </div>
                     </div>
 
 
-                    <p onclick="toggleDivViz('whatviz','chartvizwhat'); freqartistdata();" class="slidevizcard">SEE THE VISUALIZATION
+                    <p onclick="toggleDivViz('whatviz','chartvizwhat'); freqartistdata();" class="slidevizcard">SEE THE
+                      VISUALIZATION
                       <!-- <i class="bi bi-arrow-right"></i>-->
                     </p>
 
@@ -267,7 +301,8 @@
                   <div class="whatviz" id="chartvizwhat">
                     <div id="chart_div" style="width: 100%; margin-top: 1em;"></div>
 
-                    <p onclick="toggleDivViz('whatviz','cardrow')" style="text-align: left; margin-top: 0.5em;" class="slidevizcard">SEE THE ARTISTS</p>
+                    <p onclick="toggleDivViz('whatviz','cardrow')" style="text-align: left; margin-top: 0.5em;"
+                      class="slidevizcard">SEE THE ARTISTS</p>
 
                   </div>
 
@@ -276,7 +311,8 @@
                 <!-- Accession year -->
                 <div class="mt-4 firstviz" id="accessionyear">
                   <h4>Since 1870, a cultural lighthouse for the US</h4>
-                  <p>The Metropolitan Museum was founded in 1870 and immediately started collecting Italian paintings</p>
+                  <p>The Metropolitan Museum was founded in 1870 and immediately started collecting Italian paintings
+                  </p>
                   <h5>Most of the artworks entered the collection between the Great Depression and WWII</h5>
                   <div id="linechart" style="height: 100%; margin: 0%" class="mt-4"></div>
                 </div>
@@ -284,7 +320,8 @@
                 <!-- Accession type -->
                 <div class="mt-4 firstviz" id="accessiontypes">
                   <h4>Art market, donors and collectors: an evolving collection</h4>
-                  <p>A crucial activity for a museum is renew its collection, which can be done in different modalities</p>
+                  <p>A crucial activity for a museum is renew its collection, which can be done in different modalities
+                  </p>
                   <h5>MET often accessions new musealia directly through the art market and donations</h5>
 
                   <div id="chart_accession" style="height: 100%; margin: 0%" class="mt-4"></div>
@@ -404,8 +441,9 @@
               <div class="about final" id="finalmain">
                 <div class="about--banner mt-4">
                   <h2>
-                    Artworks in search<br>
-                    of identity<br>
+                    Changing identities<br>
+                    of a travelling<br>
+                    artwork
                   </h2>
                   <img src="assets/img/zeri_nobackground.png" alt="About Us"
                     style="transform: translateY(-2rem) translateX(4rem); width: 700px;">
@@ -414,97 +452,90 @@
                   <a onclick="toggleDiv('final','final1')">
                     <h3>LETTERS</h3>
                   </a>
-                  <!--
-                  <a onclick="toggleDiv('final2')">
-                    <h3>Philosophy</h3>
-                  </a>
-                  <a onclick="toggleDiv('final3')">
-                    <h3>History</h3>
-                  </a>
-                  -->
                 </div>
               </div>
               <div class="work final" id="final1">
-                <h2>Letters 1</h2>
-                <div class="text-center">
-                  <div class="btn-group">
-                    <!--
-                    <button type="button" class="btn btn-outline-danger" onclick="toggleDiv(id)">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-                      </svg>
-                      <span>Previous</span>
-                    </button>
-                    -->
-                    <button type="button" class="btn btn-outline-danger" onclick="toggleDiv('final','finalmain')">
-                      <span>Main page</span>
-                    </button>
-                    <!--
-                    <button type="button" class="btn btn-outline-danger" onclick="toggleDiv('final2')">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-arrow-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                          d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-                      </svg>
-                      <span>Following</span>
-                    </button>
-                    -->
+                <h2>Federico Zeri and the art of connoisseurship</h2>
+                <div style="margin-top: 1em;">
+
+                  <div class="row text-center" style="font-size: 1.3em; color: gray;">
+                    <div class="col-sm zeriProgressLabel" id="zeriProgressLabel1"
+                      onclick="showSectionProgress('sectionzeri', 'zeriartwork', 1, '33%');" style="color: #ed0025">
+                      <b>The artwork</b></div>
+                    <div class="col-sm zeriProgressLabel" id="zeriProgressLabel2"
+                      onclick="showSectionProgress('sectionzeri', 'zeriexpertise', 2, '66%'); LeafletShowImg('leafletletterzeri', 'letter_pag1')">
+                      <b>The expertise</b></div>
+                    <div class="col-sm zeriProgressLabel" id="zeriProgressLabel3"
+                      onclick="showSectionProgress('sectionzeri', 'zerimetcatalog', 3, '100%')"><b>The catalog</b></div>
                   </div>
+
+                  <div class="progress" style="margin-top: 1.2em; height: 0.3em;">
+                    <div id="zeribar" class="progress-bar" role="progressbar" style="width: 33%" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <section class="sectionzeri" id="zeriartwork">
+                    <div class="row">
+                      <div class="col-8">
+                        <p>The Metropolitan has been exhibiting since 1941 a "Portrait of a Knight of Malta", dating
+                          back to 1566 <a href="https://www.metmuseum.org/art/collection/search/437255" target="_blank"
+                            style="color: #ed0025;"><i class="bi bi-arrow-right"></i></a></p>
+                        <p>The online catalog of the museum defines this artwork as "attributed": there is no evidence
+                          that can irrefusably link this painting to a creator. Especially in the 20th century, many
+                          solutions were proposed. These hypotheses included artists like El Greco, Jacopino del Conte,
+                          Bartolomeo Passerotti, Girolamo Macchietti and Mirabello Cavalori.</p>
+                        <p>But what is the truth?</p>
+                      </div>
+                      <div class="col-4">
+                        <img src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/437255/1895951/main-image"
+                          id="jacopinodelcontemalta">
+                      </div>
+                    </div>
+                  </section>
+                  <section class="sectionzeri" id="zeriexpertise">
+                    <div class="row">
+                      <div class="col-7">
+                        <p>The young Federico Zeri, who devoted his final thesis to Jacopino del Conte, writes a letter where he rises his doubts about a possible reconstruction attribution to this painter (Margaretta Salinger, 1944). The third paragraph indeed states that:</p>
+                        <p style="font-size: 1em; font-style: italic;" class="mx-2">Inv. no. 41.100.05: The hypothesis about Jacopino del Conte is not acceptable, as it is not supported neither by comparisons with other artworks of his nor by the date 1566. At this time Jacopino was doing totally different portraits, which are characterised by a very mechanincal and arid style. In my opinion, the painting was not created by this Roman painter, rather by an artist who also knew the pictorial tradition of Northen Italy.</p>
+                        <p id="linkzeriletter"><a href="https://fondazionezeri.unibo.it/en/photo-archive/documents-attached/correspondence-from-the-metropolitan-museum-of-art-new-york" target="_blank">LEARN MORE!</a></p>
+                        
+                      </div>
+                      <div class="col-5">
+                        <div id="leafletletterzeri" class="leafletimg"></div>
+                        <small>Letter from Federico Zeri to Mrs. TenEyck Gardner, October 13th, 1949; f. 1
+                          <a href="https://github.com/ManueleVeggi/infoviz/blob/fe6e1d8183a15c75c6bbbf4b98ce7754f4852ab6/assets/zeriLetters/CopyrightLetters.md" target="_blank">
+                            <i class="bi bi-exclamation-triangle" data-toggle="modal" data-target="#exampleModal" onclick="alert('Albeit the repository and the associated webpage are released under license CC-BY 4.0, the reuse for any purposes of the digital reproduction of the letter by Federico Zeri saved in this folder is not allowed. \nFor further information, contact the Archive of the Metropolitan Museum in New York and the Photo Archive of Fondazione Zeri in Bologna. These institutions allowed the reuse of this asset for the sole purpose of the current University project.')"></i>
+                          </a>
+                        </small>
+                      </div>
+
+                    </div>
+                  </section>
+                  <section class="sectionzeri" id="zerimetcatalog">
+                    <div class="row">
+                      <div class="col-8">
+                        <p>One of the main contribution by Zeri to the understanding of the MET Collection is the creation of four catalogs of Italian painting. The one focused on <a href="https://www.metmuseum.org/art/metpublications/Italian_Paintings_A_Catalogue_of_the_Collection_of_The_Metropolitan_Museum_of_Art_Vol_4_North_Ita" target="_blank">Northen Italy</a> (1986:51) mentions the portrait and attributes it to Bartolomeo Passerotti:</p>
+                        <p style="font-size: 1em; font-style: italic;" class="mx-2">The composition is apparently derived from a model current in Rome, very likely by Jacopino del Conte, but the brushwork reflects Venetian technique around the middle of the century, especially that of the young Jacopo Tintoretto. The treatment of highlights, the thin layer of colors, and the general tone are quite typical of Passerotti, and the date is consistent with his work at that moment.</p>
+                        <p>Federico Zeri was eventually only partly right: Jacopino del Conte is not admissible as possible creator of the portrait, yet neither is Passerotti. Recently Privitera proposed Mirabello Cavalori, who is now considered as the correct attributed painter of this portrait.</p>
+                      </div>
+                      <div class="col-4">
+                        <a href="https://libmma.contentdm.oclc.org/digital/collection/p15324coll10/id/188178"
+                          target="_blank">
+                          <img
+                            src="https://libmma.contentdm.oclc.org/digital/iiif/p15324coll10/187989/full/full/0/default.jpg"
+                            style="height: 55vh;">
+                        </a>
+                      </div>
+                    </div>
+                  </section>
+                  <!--
+                  <div class="text-center">
+                    <span onclick="toggleDiv('final','finalmain')" style="color: #ed0025; font-size: 1.2em">
+                      <p id="menufinal">PREVIOUS PAGE</p>
+                    </span>
+                  </div>
+                  -->
                 </div>
               </div>
-              <!--
-              <div class="work final" id="final2">
-                <h2>Letters 2</h2>
-                <div class="text-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-outline-danger" onclick="toggleDiv('final1')">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-                      </svg>
-                      <span>Previous</span>
-                    </button>
-                    <button type="button" class="btn btn-outline-danger" onclick="toggleDiv('finalmain')">
-                      <span>Main page</span>
-                    </button>
-                    <button type="button" class="btn btn-outline-danger" onclick="toggleDiv('final3')">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-arrow-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                          d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-                      </svg>
-                      <span>Following</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="work final" id="final3">
-                <h2>Letters 3</h2>
-                <div class="text-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-outline-danger" onclick="toggleDiv('final2')">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-                      </svg>
-                      <span>Previous</span>
-                    </button>
-                    <button type="button" class="btn btn-outline-danger" onclick="toggleDiv('finalmain')">
-                      <span>Main page</span>
-                    </button>
-                    
-                    <button type="button" class="btn btn-outline-danger" onclick="toggleDiv(id)">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-arrow-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                          d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-                      </svg>
-                      <span>Following</span>
-                    </button>
-                    
-                  </div>
-                </div>
-              </div>
-              -->
             </li>
             <li class="l-section section">
               <div class="hire text-center">
