@@ -4,11 +4,16 @@ Final Project of "Information Visualisation" (Prof. Marilena Daquino) at Univers
 
 Main site at the following [link](https://manueleveggi.github.io/infoviz/)
 
-## Team
+## Team members and statement of responsibility
 
-- Ali Ghasempouri
-- Sebastiano Giacomini
-- Manuele Veggi
+All members of the teams worked together in the definition of the focal domain of interest, in the retrieval of source data and in the final revision. The core parts of the workflow were divided as follows:  
+
+| Team member                                                         | Section            |
+|---------------------------------------------------------------------|--------------------|
+| [Ghasempouri Ali](mailto:seyedali.ghasempouri@studio.unibo.it)      | Data Visualization |
+| [Giacomini Sebastiano](mailto:sebastiano.giacomini@studio.unibo.it) | Data Analysis      |
+| [Veggi Manuele](mailto:manuele.veggi@studio.unibo.it)               | Web Communication  |
+
 
 ## References
 
@@ -26,8 +31,8 @@ The main references publications for the website are the catalog written by Zeri
 Zeri Z. and E. Gardner. <i>Italian Paintings. A Catalogue of the Collection of
 The Metropolitan Museum of Art</i>. Vicenza: Neri Pozza.
 
-| Volume no. | Title                              | Year | Online resource                                                                                                                                              |
-|------------|------------------------------------|------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Volume no. | Title| Year | Online resource  |
+|------------|------|------|------------------|
 | 1          | Florentine School                  | 1971 | [Link](https://www.metmuseum.org/art/metpublications/italian_paintings_a_catalogue_of_the_collection_of_the_metropolitan_museum_of_art_vol_1_florentin)      |
 | 2          | Venetian School                    | 1973 | [Link](http://www.metmuseum.org/art/metpublications/italian_paintings_a_catalogue_of_the_collection_of_the_metropolitan_museum_of_art_vol_2_venetian_school) |
 | 3          | Sienese and Central Italian School | 1986 | [Link](https://www.metmuseum.org/art/metpublications/italian_paintings_a_catalogue_of_the_collection_of_the_metropolitan_museum_of_art_vol_3_sienese_a)      |
