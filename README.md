@@ -40,13 +40,13 @@ The Metropolitan Museum of Art</i>. Vicenza: Neri Pozza.
 
 Other relevant resources have been:
 
-- <i>Thomas J. Watson Library Digital Collections</i>, The Metropolitan Museum of Art ([link](https://www.metmuseum.org/art/libraries-and-research-centers/watson-digital-collections))
-- <i>Grange-Blanche, Louise Labé et Pierre-Toussaint de Chazelles</i>, website of the city of Parcieux ([link](https://www.parcieux.fr/Grange-Blanche-Louise-Labe-et-Pierre-Toussaint-de-Chazelles.html?lang=fr))
+- <i>Thomas J. Watson Library Digital Collections</i>, The Metropolitan Museum of Art ([link](https://www.metmuseum.org/art/libraries-and-research-centers/watson-digital-collections)).
+- <i>Grange-Blanche, Louise Labé et Pierre-Toussaint de Chazelles</i>, website of the municipality of Parcieux ([link](https://www.parcieux.fr/Grange-Blanche-Louise-Labe-et-Pierre-Toussaint-de-Chazelles.html?lang=fr)).
 - Cheney, Iris H. <i>Notes on Jacopino del Conte</i>. "Art Bulletin" 52 (March 1970), 1970.
 - Corso, M. <i>Jacopino del Conte nel contesto artistico romano tra gli anni trenta e gli anni cinquanta del Cinquecento</i>. PhD diss., Università degli Studi Roma Tre, 2014.
 - Privitera, M. <i>Girolamo Macchietti : un pittore dello Studiolo di Francesco I. (Firenze 1535-1592)</i>. Milan: Jandi Sapi editori, 1966.
 - Salinger, M. <i>A Portrait of a Knight of Malta</i>. "The Metropolitan Museum of Art Bulletin", vol. 2, no. 5, 1944, pp. 164–65. ([JSTOR](https://doi.org/10.2307/3257124)).
-- Vasari, G. <i>Le vite dei più eccellenti pittori, scultori e architetti</i>. Guttemberg, 1876 ([link](https://books.google.it/books?hl=it&lr=&id=97PcyE3ksa4C&oi=fnd&pg=PA3&dq=vasari+vite&ots=m6DvwRDKtZ&sig=4-wbsqnw-NrFU_dCCeNVQzTeEz8&redir_esc=y#v=onepage&q=vasari%20vite&f=false))
+- Vasari, G. <i>Le vite dei più eccellenti pittori, scultori e architetti</i>. Guttemberg, 1876 ([link](https://books.google.it/books?hl=it&lr=&id=97PcyE3ksa4C&oi=fnd&pg=PA3&dq=vasari+vite&ots=m6DvwRDKtZ&sig=4-wbsqnw-NrFU_dCCeNVQzTeEz8&redir_esc=y#v=onepage&q=vasari%20vite&f=false)).
 
 As the historical and biographical reconstructions of main European and US art dealers is still ongoing by scholars, not always bibliographical resources were founded. The main pieces of information about the dealers are hence coming from the online articles published by the Metropolitan Museum of Art and, in the worst scenarios, from online encyclopedias (Wikipedia). 
 
