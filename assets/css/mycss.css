@@ -119,16 +119,9 @@ p {
 }
 
 .about--options>a:nth-child(1) {
-    background-image: url("https://www.archivalmethods.com/blog/wp-content/uploads/7-Letters-copy.jpg")
+    background-image: url("https://fondazionezeri.unibo.it/it/immagini/testate/fototeca-zeri-780x380/@@images/0a6491ce-78bb-47c7-a80b-63d52ee7a8ad.jpeg")
 }
 
-.about--options>a:nth-child(2) {
-    background-image: url("../img/about-philosophy.jpg")
-}
-
-.about--options>a:nth-child(3) {
-    background-image: url("../img/about-history.jpg")
-}
 
 .about--options>a:hover h3 {
     bottom: -50px;

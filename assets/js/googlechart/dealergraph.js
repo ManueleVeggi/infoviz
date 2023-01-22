@@ -15,7 +15,7 @@ function drawVizDealer(rawData) {
             "Frequence"
         ]
     ]
-
+ 
     rawData.forEach(function (el) {
         arr.push([
             el.dealer,

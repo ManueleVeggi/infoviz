@@ -27,10 +27,10 @@ print("\n", "======", "\n")
 metDealer = []
 
 for idx, row in metData.iterrows():
-    appendItem(row["agentsTransfer"], metDealer)
+    appendItem(row["lastDealer"], metDealer)
 
-metFreq = collections.Counter(metDealer)
-metDealerDf = pd.DataFrame({"freq": metFreq})
+metFreq = dict(collections.Counter(metDealer))
+metDealerDf = pd.DataFrame.from_dict(metFreq, orient='index').reset_index().rename(columns={'index':'dealer', 0:'freq'})
 print(metDealerDf)
 
 artworks = metData[["Title", "ArtistAlphaSort", "Object End Date", "Object Number", "AccessionYear", "lastTransfer"]]
