@@ -271,3 +271,56 @@ p {
     font-size: 1.2em;
 }
 
+.firstviz, #chartvizwhat, #chartvizwho {
+    opacity: 0;
+    visibility: hidden;
+    position: relative;
+}
+
+#chartvizwhat, #chartvizwho {
+    margin-top: 0px !important;
+}
+
+.replicateTransition {
+    animation: transition .4s ease-in-out forwards;   
+}
+
+@keyframes transition {
+    from {opacity: 0; visibility: hidden;}
+    to {opacity: 1; visibility: visible;}
+}
+
+.goAway {
+    animation: reversetransition 0.4s ease-in-out forwards;   
+}
+
+.firstviz.goAway {
+    animation: reversetransition2 0.4s ease-in-out forwards;   
+}
+
+@keyframes reversetransition {
+    from {opacity: 1; visibility: visible; margin-top: 0px;}
+    to {opacity: 0; visibility: hidden; margin-top: -45px;}
+}
+
+@keyframes reversetransition2 {
+    from {opacity: 1; visibility: visible; top: 0px;}
+    to {opacity: 0; visibility: hidden; top: -45px;}
+}
+
+.goAway + #canc {
+    position: absolute;
+    animation: reversetransition 0.4s ease-in-out ;
+}
+
+.goAway + #canc .col-3 {
+    position: relative;
+    top: -60px
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+
