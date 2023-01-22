@@ -18,24 +18,55 @@ function toggleDiv(className, id) {
 
 }
 
+function fun(classObj) {
+    setTimeout(function() {
+        console.log(classObj);
+        classObj.style.display="none";
+        classObj.classList.add("hidden");
+    }, 400)
+}
+
 function toggleDivViz(className, id) {
+    if (document.getElementById("vizheader").classList.contains("goAway")) {
+        document.getElementById("vizheader").classList.remove("goAway");
+        document.getElementById("vizheader").classList.add("goAway")
+    }
+    else {
+        document.getElementById("vizheader").classList.add("goAway")
+    }
+    document.getElementById("canc").classList.add("goAway");
+    var delayInMilliseconds = 400;
     var myClass = document.getElementsByClassName(className);
-    for (var i = 0; i < myClass.length; i++) {
-        myClass[i].style.display = 'none';
+
+    for(var i = 0; i < myClass.length; i++) {
+        myClass[i].classList.remove("goAway");
         myClass[i].classList.remove("replicateTransition");
+        var x = myClass[i];
+        if (x.getAttribute("id") == id) {
+            myClass[i].classList.remove("hidden");
+            myClass[i].classList.add("replicateTransition");
+            
+        }
+        else {
+            myClass[i].classList.add("goAway");
+            fun(myClass[i]);
+        }
     }
-
+    document.getElementById("metfacade").classList.add("goAway");
+    
     var toDisplay = document.getElementById(id);
-    if (id.includes("row")) {
-        toDisplay.style.display = "flex"
-    } else {
-        toDisplay.style.display = "block";
-    }
+    
 
-    document.getElementById('vizheader').style.display = "none";
-    document.getElementById('metfacade').style.display = "none";
-
-    toDisplay.classList.add("replicateTransition")
+    setTimeout(function() {
+        if (id.includes("row")) {
+            toDisplay.style.display = "flex"
+        }
+        else {
+            toDisplay.style.display = "block"
+        }
+    }, delayInMilliseconds);
+    document.getElementById("canc").classList.remove("goAway");
+    document.getElementById("canc").classList.add("replicateTransition");
 
 }
 
@@ -44,7 +75,6 @@ function toggleScrJS(id) {
     for (var i = 0; i < myClass.length; i++) {
         myClass[i].src = '';
     }
-
     if (id == "jschartartist") {
         var jspath = "assets/js/googlechart/artistgraph.js"
     } else if (id == "jschartdate") {
@@ -105,14 +135,7 @@ function LeafletShowImg(divId, filepath) {
 
 function showSectionProgress(className, sectionName, progressLabelNo, progressWidth) {
 
-    // Display
-    var myClass = document.getElementsByClassName(className);
-    for (var i = 0; i < myClass.length; i++) {
-        myClass[i].style.display = 'none'
-    }
-
-    document.getElementById(sectionName).style.display = "flex";
-
+    toggleDivViz(className, sectionName)
     // Bar
     document.getElementById('zeribar').style.width = progressWidth;
 
