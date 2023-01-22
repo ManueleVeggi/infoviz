@@ -27,14 +27,16 @@ function fun(classObj) {
 }
 
 function toggleDivViz(className, id) {
-    if (document.getElementById("vizheader").classList.contains("goAway")) {
-        document.getElementById("vizheader").classList.remove("goAway");
-        document.getElementById("vizheader").classList.add("goAway")
+    if (className.includes("viz")) {
+        if (document.getElementById("vizheader").classList.contains("goAway")) {
+            document.getElementById("vizheader").classList.remove("goAway");
+            document.getElementById("vizheader").classList.add("goAway")
+        }
+        else {
+            document.getElementById("vizheader").classList.add("goAway")
+        }
+        document.getElementById("canc").classList.add("goAway");
     }
-    else {
-        document.getElementById("vizheader").classList.add("goAway")
-    }
-    document.getElementById("canc").classList.add("goAway");
     var delayInMilliseconds = 400;
     var myClass = document.getElementsByClassName(className);
 
@@ -52,8 +54,9 @@ function toggleDivViz(className, id) {
             fun(myClass[i]);
         }
     }
-    document.getElementById("metfacade").classList.add("goAway");
-    
+    if (className.includes("viz")) {
+        document.getElementById("metfacade").classList.add("goAway");
+    }
     var toDisplay = document.getElementById(id);
     
 
@@ -63,6 +66,9 @@ function toggleDivViz(className, id) {
         }
         else {
             toDisplay.style.display = "block"
+        }
+        if(id == "accessionyear") {
+            linedata();
         }
     }, delayInMilliseconds);
     document.getElementById("canc").classList.remove("goAway");
