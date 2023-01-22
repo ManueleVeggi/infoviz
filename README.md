@@ -1,8 +1,16 @@
 # Nice to MET you
 
+**More than five hundreds Italian painting are now exhibited at Metropolitan Museum of Art, New York. What's the history behind these journeys?**
+
 Final Project of "Information Visualisation" (Prof. Marilena Daquino) at University of Bologna, MA "Digital Humanities and Digital Knowledge" (a.y. 2022/2023)
 
-Main site at the following [link](https://manueleveggi.github.io/infoviz/)
+## Main outcomes
+
+- Final website is available at the following [link](https://manueleveggi.github.io/infoviz/)
+- Data analysis, manipulation and visualization are described in the following [documentation]()
+- To extract relevant information, source datasets (see below) have been modified through pandas library (Python). The output csv files are available here: 
+  - [[1]]() mashes up the content of MET Open Access CSV with the result of the query on Zeri&LODE dataset 
+  - [[2]](https://github.com/ManueleVeggi/infoviz/blob/8c167835b30a3f6009dc1050b2c8b3e8b0d91565/data_management/transfers.csv) streamlines the manipulation of the content of the column "Credit line" (MET Dataset)
 
 ## Team members and statement of responsibility
 
@@ -11,7 +19,7 @@ All members of the teams worked together in the definition of the focal domain o
 | Team member                                                         | Section            |
 |---------------------------------------------------------------------|--------------------|
 | [Ghasempouri Ali](mailto:seyedali.ghasempouri@studio.unibo.it)      | Data Visualization |
-| [Giacomini Sebastiano](mailto:sebastiano.giacomini@studio.unibo.it) | Data Analysis      |
+| [Giacomini Sebastiano](mailto:sebastiano.giacomini@studio.unibo.it) | Data Analysis and Manipulation |
 | [Veggi Manuele](mailto:manuele.veggi@studio.unibo.it)               | Web Communication  |
 
 
