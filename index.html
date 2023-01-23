@@ -67,9 +67,9 @@
           <nav class="l-side-nav">
             <ul class="side-nav">
               <li class="is-active"><span>Home</span></li>
-              <li><span>Art dealers</span></li>
-              <li><span>Art works</span></li>
-              <li><span>Art sources</span></li>
+              <li><span>Art collection</span></li>
+              <li><span>Art journeys</span></li>
+              <li><span>Art identities</span></li>
               <li><span>Credits</span></li>
             </ul>
           </nav>
@@ -95,15 +95,15 @@
                   <img src="assets/img/met_logo.png" alt="Welcome">
                 </div>
                 <div class="intro--options">
-                  <a href="#dealers">
+                  <a href="">
                     <h3>HIDDEN PROTAGONISTS</h3>
                     <p>Private collectors and art dealers: the unknown agents behind transfers of artworks</p>
                   </a>
-                  <a href="#0">
+                  <a href="">
                     <h3>ACROSS THE OCEAN</h3>
-                    <p>Owing to commercial trassactions, artworks can undertake long journeys</p>
+                    <p>Owing to commercial transactions, artworks can undertake long journeys</p>
                   </a>
-                  <a href="#0">
+                  <a href="">
                     <h3>CHANGING IDENTITIES</h3>
                     <p>Beside changing conservation venues, artworks may change attribution and interpretation</p>
                   </a>
@@ -114,7 +114,7 @@
               <div class="work" style="text-align: center;">
                 <span id="vizheader">
                   <h2>Unique stories of an art collection</h2>
-                  <h4 class="mb-3">Each artwork can tell us an inimitable stories, <br> where art and commerce converge
+                  <h4 class="mb-3">Each artwork can tell us inimitable stories, <br> where art and commerce converge
                   </h4>
                 </span>
 
@@ -144,7 +144,7 @@
                 <!-- Art dealers -->
                 <div class="mt-4 firstviz" id="frequentdealer">
                   <h4>The hidden protagonists of the art world</h4>
-                  <p>More than one hunderd art dealers contributed to MET collections<sup
+                  <p>More than one hundred art dealers contributed to MET collections<sup
                       onclick="alert('Gwynne Andrews is not reported among this card as no other information about him was found')">[1]</sup>
                   </p>
                   <h5>But who are the most relevant actors?</h5>
@@ -160,7 +160,7 @@
                           <div class="flip-card-back">
                             <h1>Michael Friedsam</h1>
                             <p>1860 - 1931</p>
-                            <p<>He was one of the first American art collector. At his death, he left his possession to
+                            <p<>He was one of the first American art collectors. At his death, he left his possession to
                               the city of New Yorks and bequeathed several paintings to MET and Brooklyn Museum of Art
                               </p>
                           </div>
@@ -221,7 +221,7 @@
 
                   <h4>Five centuries of Italian art at MET</h4>
                   <p>The Metropolitan Museum hold 532 Italian paintings by almost three hundreds artists, ranging
-                    <!--<br> from Middle Ages to Nineteenth Century.-->
+                    <br> from Middle Ages to Nineteenth Century.
                   </p>
                   <h5>But who are the most represented artists of this collection?</h5>
 
@@ -293,7 +293,6 @@
 
                     <p onclick="toggleDivViz('whatviz','chartvizwhat'); freqartistdata();" class="slidevizcard">SEE THE
                       VISUALIZATION
-                      <!-- <i class="bi bi-arrow-right"></i>-->
                     </p>
 
                   </div>
@@ -483,7 +482,7 @@
                           that can irrefusably link this painting to a creator. Especially in the 20th century, many
                           solutions were proposed. These hypotheses included artists like El Greco, Jacopino del Conte,
                           Bartolomeo Passerotti, Girolamo Macchietti and Mirabello Cavalori.</p>
-                        <p>But what is the truth?</p>
+                        <p style="color: #ed0025;"><b>BUT WHAT IS THE TRUTH?</b></p>
                       </div>
                       <div class="col-4">
                         <img src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/437255/1895951/main-image"
@@ -494,8 +493,8 @@
                   <section class="sectionzeri" id="zeriexpertise">
                     <div class="row">
                       <div class="col-7">
-                        <p>The young Federico Zeri, who devoted his final thesis to Jacopino del Conte, writes a letter where he rises his doubts about a possible reconstruction attribution to this painter (Margaretta Salinger, 1944). The third paragraph indeed states that:</p>
-                        <p style="font-size: 1em; font-style: italic;" class="mx-2">Inv. no. 41.100.05: The hypothesis about Jacopino del Conte is not acceptable, as it is not supported neither by comparisons with other artworks of his nor by the date 1566. At this time Jacopino was doing totally different portraits, which are characterised by a very mechanincal and arid style. In my opinion, the painting was not created by this Roman painter, rather by an artist who also knew the pictorial tradition of Northen Italy.</p>
+                        <p>The young Federico Zeri, who devoted his final thesis to Jacopino del Conte, rises his doubts about a possible reconstruction attribution to this painter (Margaretta Salinger, 1944). The third paragraph indeed states that:</p>
+                        <p style="font-size: 1em; font-style: italic;" class="mx-2">Inv. no. 41.100.05: The hypothesis about Jacopino del Conte is not acceptable, as it is not supported neither by comparisons with other artworks of his, nor by the date 1566. At this time Jacopino was doing totally different portraits, which are characterised by a very mechanincal and arid style. In my opinion, the painting was not created by this Roman painter, rather by an artist who also knew the pictorial tradition of Northen Italy.</p>
                         <p id="linkzeriletter"><a href="https://fondazionezeri.unibo.it/en/photo-archive/documents-attached/correspondence-from-the-metropolitan-museum-of-art-new-york" target="_blank">LEARN MORE!</a></p>
                         
                       </div>
@@ -503,7 +502,7 @@
                         <div id="leafletletterzeri" class="leafletimg"></div>
                         <small>Letter from Federico Zeri to Mrs. TenEyck Gardner, October 13th, 1949; f. 1
                           <a href="https://github.com/ManueleVeggi/infoviz/blob/fe6e1d8183a15c75c6bbbf4b98ce7754f4852ab6/assets/zeriLetters/CopyrightLetters.md" target="_blank">
-                            <i class="bi bi-exclamation-triangle" data-toggle="modal" data-target="#exampleModal" onclick="alert('Albeit the repository and the associated webpage are released under license CC-BY 4.0, the reuse for any purposes of the digital reproduction of the letter by Federico Zeri saved in this folder is not allowed. \nFor further information, contact the Archive of the Metropolitan Museum in New York and the Photo Archive of Fondazione Zeri in Bologna. These institutions allowed the reuse of this asset for the sole purpose of the current University project.')"></i>
+                            <i class="bi bi-exclamation-triangle" data-toggle="modal" data-target="#exampleModal" onclick="alert('Albeit the repository and the associated webpage are released under license CC-BY 4.0, the reuse for any purposes of the digital reproduction of this letter by Federico Zeri. \nFor further information, contact the Archive of the Metropolitan Museum in New York and the Photo Archive of Fondazione Zeri in Bologna. These institutions allowed the reuse of this asset for the sole purpose of the current University project.')"></i>
                           </a>
                         </small>
                       </div>
@@ -513,9 +512,9 @@
                   <section class="sectionzeri" id="zerimetcatalog">
                     <div class="row">
                       <div class="col-9">
-                        <p>One of the main contribution by Zeri to the understanding of the MET Collection is the creation of four catalogs of Italian painting. The one focused on <a href="https://www.metmuseum.org/art/metpublications/Italian_Paintings_A_Catalogue_of_the_Collection_of_The_Metropolitan_Museum_of_Art_Vol_4_North_Ita" target="_blank">Northen Italy</a> (1986:51) mentions the portrait and attributes it to Bartolomeo Passerotti:</p>
+                        <p>One of the main contribution by Zeri to the understanding of the MET Collection is the creation of four catalogs about Italian painting. The one focused on <b>Northen Italy</b> (1986: 51) mentions the portrait and attributes it to Bartolomeo Passerotti:</p>
                         <p style="font-size: 1em; font-style: italic;" class="mx-2">The composition is apparently derived from a model current in Rome, very likely by Jacopino del Conte, but the brushwork reflects Venetian technique around the middle of the century, especially that of the young Jacopo Tintoretto. The treatment of highlights, the thin layer of colors, and the general tone are quite typical of Passerotti, and the date is consistent with his work at that moment.</p>
-                        <p>Federico Zeri was eventually only partly right: Jacopino del Conte is not admissible as possible creator of the portrait, yet neither is Passerotti. Recently Privitera proposed Mirabello Cavalori, who is now considered as the correct attributed painter of this portrait.</p>
+                        <p><b>Federico Zeri was eventually only partly right</b>: Jacopino del Conte is not admissible as possible creator of the portrait, yet neither is Passerotti. Recently Privitera proposed Mirabello Cavalori, who is now considered as the correct attributed painter of this portrait.</p>
                       </div>
                       <div class="col-3">
                         <a href="https://libmma.contentdm.oclc.org/digital/collection/p15324coll10/id/188178"
