@@ -27,7 +27,7 @@ print("\n", "======", "\n")
 metDealer = []
 
 for idx, row in metData.iterrows():
-    appendItem(row["lastDealer"], metDealer)
+    appendItem(row["agentsTransfer"], metDealer)
 
 metFreq = dict(collections.Counter(metDealer))
 metDealerDf = pd.DataFrame.from_dict(metFreq, orient='index').reset_index().rename(columns={'index':'dealer', 0:'freq'})
