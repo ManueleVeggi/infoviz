@@ -70,6 +70,9 @@ function toggleDivViz(className, id) {
         if(id == "accessionyear") {
             linedata();
         }
+        else if (id="accessiontypes") {
+            bardata();
+        }
     }, delayInMilliseconds);
     document.getElementById("canc").classList.remove("goAway");
     document.getElementById("canc").classList.add("replicateTransition");
