@@ -112,7 +112,8 @@ function drawViz(rawData) {
         legend: 'none',
         colors: ['red']
     };
-
-    var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
-    chart.draw(data, options);
+    setTimeout(function() {
+        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+    }, 400)
 }
