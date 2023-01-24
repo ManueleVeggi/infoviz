@@ -7,7 +7,8 @@ Final Project of "Information Visualisation" (Prof. Marilena Daquino) at Univers
 ## Main outcomes
 
 - Final website is available at the following [link](https://manueleveggi.github.io/infoviz/)
-- Data analysis, manipulation and visualization are described in the following [documentation]()
+- A brief presentation describing purposes and metodologies of this project is available at the following [link](https://docs.google.com/presentation/d/11YYI_wd2Yf3GqsPKDljPM8YxvV9XXNpfuBL-k9eSdpE/edit?usp=sharing)
+- Data analysis, manipulation and visualization are described in the following [documentation](https://github.com/ManueleVeggi/infoviz/blob/4de92e73e45ab80275a7b152790a50546cfc3534/documentation.ipynb)
 - To extract relevant information, source datasets (see below) have been modified through pandas library (Python). The output csv files are available here: 
   - [[1]]() mashes up the content of MET Open Access CSV with the result of the query on Zeri&LODE dataset 
   - [[2]](https://github.com/ManueleVeggi/infoviz/blob/8c167835b30a3f6009dc1050b2c8b3e8b0d91565/data_management/transfers.csv) streamlines the manipulation of the content of the column "Credit line" (MET Dataset)
