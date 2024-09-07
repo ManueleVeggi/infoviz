@@ -144,7 +144,7 @@
                 <!-- Art dealers -->
                 <div class="mt-4 firstviz" id="frequentdealer">
                   <h4>The hidden protagonists of the art world</h4>
-                  <p>More than one hundred art dealers contributed to MET collections<sup
+                  <p>More than one hundred donors contributed to the MET collection of Italian paintings<sup
                       onclick="alert('Gwynne Andrews is not reported among this card as no other information about him was found')">[1]</sup>
                   </p>
                   <h5>But who are the most relevant actors?</h5>
@@ -211,7 +211,7 @@
                     <div id="chart_dealer" style="height: 100%; margin: 0%"></div>
 
                     <p onclick="toggleDivViz('whoviz','cardrowdealer')" class="slidevizcard"
-                      style="text-align: left; margin-top: 0.5em;">SEE THE DEALERS</p>
+                      style="text-align: left; margin-top: 0.5em;">SEE THE MOST SIGNIFICANT DONORS</p>
 
                   </div>
                 </div>
@@ -220,7 +220,7 @@
                 <div class="mt-4 firstviz" id="frequentartist">
 
                   <h4>Five centuries of Italian art at MET</h4>
-                  <p>The Metropolitan Museum hold 532 Italian paintings by almost three hundreds artists, ranging
+                  <p>The Metropolitan Museum holds 532 Italian paintings by almost three hundreds artists, ranging
                     <br> from Middle Ages to Nineteenth Century.
                   </p>
                   <h5>But who are the most represented artists of this collection?</h5>
@@ -259,7 +259,7 @@
                           </div>
                           <div class="flip-card-back">
                             <h1>Giambattista Tiepolo</h1>
-                            <p>1712 - 1793</p>
+                            <p>1696 - 1770</p>
                             <p>He was one of the greatest painter in 18th century Venice and wonderfully decorated with
                               frescoes churches and villas</p>
                             <p><small><i>Allegoria dei pianeti e dei continenti</i>, 1752 <a
@@ -280,8 +280,8 @@
                           </div>
                           <div class="flip-card-back">
                             <h1>Giovanni di Paolo</h1>
-                            <p>1398 - 1793</p>
-                            <p>He was a Senese painter and was deeply influenced by the International Gothic</p>
+                            <p>1399 (ca.) - 1482</p>
+                            <p>He was a Sienese painter and was deeply influenced by the International Gothic</p>
                             <p><small><i>The Adoration of the Magi</i>, 1460 <a
                                   href="https://www.metmuseum.org/art/collection/search/436509?sortBy=Relevance&amp;ft=Giovanni+di+Paolo+(Giovanni+di+Paolo+di+Grazia)&amp;offset=0&amp;rpp=40&amp;pos=13"
                                   class="cardarrowmet"><i class="bi bi-arrow-right"></i></a></small></p>
@@ -399,7 +399,7 @@
                           </div>
                         </div>
                       </a>
-                      <p class="slider--item-title w-100 mx-auto"> Raffaello Sanzio<br> "Sacra conversazione"</i></p>
+                      <p class="slider--item-title w-100 mx-auto"> Raffaello Sanzio<br> "Pala Colonna"</i></p>
                       <p class="slider--item-description">
                         <a href="https://www.metmuseum.org/art/collection/search/437372" target="_blank">
                           <img src="assets/img/met_logo.png" style="width: 30px;">
@@ -438,34 +438,44 @@
             </li>
             <li class="l-section section">
               <div class="about final" id="finalmain">
-                <div class="about--banner mt-4">
-                  <h2>
-                    Changing identities<br>
-                    of a travelling<br>
-                    artwork
-                  </h2>
-                  <img src="assets/img/zeri_nobackground.png" alt="About Us"
-                    style="transform: translateY(-2rem) translateX(4rem); width: 700px;">
+                <div class="about--banner mt-2">
+                  <h2>Changing identities</h2>
+                  
+                  <!-- <img src="assets/img/zeri_nobackground.png" alt="About Us"
+                    style="transform: translateY(-2rem) translateX(4rem); width: 700px;"> -->
                 </div>
-                <div class="about--options">
+                <div class="row mt-4">
+                  <div class="col-8">
+                    <h2 style="font-size: 40px; font-weight: bold;">A travelling artwork and the art of connoisseurship</h2>
+                    <p class="mt-4">The Metropolitan has been exhibiting since 1941 a "Portrait of a Knight of Malta", dating back to 1566.</p>
+                    <p>As with many other unsigned paintings for which no certain documentation is preserved, the work has since been the subject of a long attributionist debate aimed at discovering its author. </p>
+                    <p style="color: #ed0025;" class="about--options mt-5"><a onclick="toggleDivViz('final','final1')"><b>SEE THE CRITICAL JOURNEY</b></a></p>
+                  </div>
+                  <div class="col-4">
+                    <img src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/437255/1895951/main-image"
+                          id="jacopinodelcontemalta">
+                  </div>
+                </div>
+                
+                <!-- <div class="about--options">
                   <a onclick="toggleDivViz('final','final1')">
-                    <h3>LETTERS</h3>
+                    <h3>SEE THE CRITICAL JOURNEY</h3>
                   </a>
-                </div>
+                </div> -->
               </div>
               <div class="work final" id="final1">
-                <h2>Federico Zeri and the art of connoisseurship</h2>
+                <h2>A travelling artwork and the art of connoisseurship</h2>
                 <div style="margin-top: 1em;">
 
                   <div class="row text-center" style="font-size: 1.3em; color: gray;">
                     <div class="col-sm zeriProgressLabel" id="zeriProgressLabel1"
                       onclick="showSectionProgress('sectionzeri', 'zeriartwork', 1, '33%');" style="color: #ed0025">
-                      <b>The artwork</b></div>
+                      <b>The first appearance</b></div>
                     <div class="col-sm zeriProgressLabel" id="zeriProgressLabel2"
                       onclick="showSectionProgress('sectionzeri', 'zeriexpertise', 2, '66%'); LeafletShowImg('leafletletterzeri', 'letter_pag1')">
-                      <b>The expertise</b></div>
+                      <b>The debate</b></div>
                     <div class="col-sm zeriProgressLabel" id="zeriProgressLabel3"
-                      onclick="showSectionProgress('sectionzeri', 'zerimetcatalog', 3, '100%')"><b>The catalog</b></div>
+                      onclick="showSectionProgress('sectionzeri', 'zerimetcatalog', 3, '100%')"><b>Recent opinions</b></div>
                   </div>
 
                   <div class="progress" style="margin-top: 1.2em; height: 0.3em;">
@@ -475,54 +485,58 @@
                   <section class="sectionzeri" id="zeriartwork">
                     <div class="row">
                       <div class="col-8">
-                        <p>The Metropolitan has been exhibiting since 1941 a "Portrait of a Knight of Malta", dating
-                          back to 1566 <a href="https://www.metmuseum.org/art/collection/search/437255" target="_blank"
+                        <p>The portrait first appeared on the art market in Rome in 1910. In this year it was published on the Catalogue of Sangiorgi, one the most important art galleries in Europe that put the painting on sale.</p>
+                        <p>The canvas was accompanied by an attribution to the Spanish painter El Greco, long active in Rome.</p>
+                        <p>Some of the most illustrious critics of the period (F. Mason Perkins, Ellis Waterhouse) agreed with this attribution in the following years.</p>
+                        <p>As by “El Greco” it was bought by George Blumental in 1914. Blumental donated the portrait to the MET in 1941. <a href="https://www.metmuseum.org/art/collection/search/437255" target="_blank"
                             style="color: #ed0025;"><i class="bi bi-arrow-right"></i></a></p>
-                        <p>The online catalog of the museum defines this artwork as "attributed": there is no evidence
-                          that can irrefusably link this painting to a creator. Especially in the 20th century, many
-                          solutions were proposed. These hypotheses included artists like El Greco, Jacopino del Conte,
-                          Bartolomeo Passerotti, Girolamo Macchietti and Mirabello Cavalori.</p>
-                        <p style="color: #ed0025;"><b>BUT WHAT IS THE TRUTH?</b></p>
                       </div>
-                      <div class="col-4">
-                        <img src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/437255/1895951/main-image"
-                          id="jacopinodelcontemalta">
+                      <div class="col-4 align-middle">
+                        <img src="assets/img/Catalogue_des_objets_d'art_ancien_1910_bnf.jpeg"
+                          id="jacopinodelcontemalta" style="display: block; margin: auto;">
+                        <p class="img-caption mt-1">Reproduction of the painting in the Galleria Sangiorgi catalog, Rome 1910</p>
                       </div>
                     </div>
                   </section>
                   <section class="sectionzeri" id="zeriexpertise">
                     <div class="row">
-                      <div class="col-7">
-                        <p>The young Federico Zeri, who devoted his final thesis to Jacopino del Conte, rises his doubts about a possible reconstruction attribution to this painter (Margaretta Salinger, 1944). The third paragraph indeed states that:</p>
-                        <p style="font-size: 1em; font-style: italic;" class="mx-2">Inv. no. 41.100.05: The hypothesis about Jacopino del Conte is not acceptable, as it is not supported neither by comparisons with other artworks of his, nor by the date 1566. At this time Jacopino was doing totally different portraits, which are characterised by a very mechanincal and arid style. In my opinion, the painting was not created by this Roman painter, rather by an artist who also knew the pictorial tradition of Northen Italy.</p>
-                        <p id="linkzeriletter"><a href="https://fondazionezeri.unibo.it/en/photo-archive/documents-attached/correspondence-from-the-metropolitan-museum-of-art-new-york" target="_blank">LEARN MORE!</a></p>
+                      <div class="col-8 mt-2" style="height: 50vh; overflow-y: auto;">
+                        <p>In 1944 Margaretta Salinger proposed to ascribe the painting to Jacopino del Conte. The young Federico Zeri, who devoted his dissertation to this artist, rose his doubts about this attribution. In 1949 he wrote a letter to the Metropolitan Museum stating that:</p>
+                        <p style="font-size: 0.8em; font-style: italic;" class="mx-2">“Inv. no. 41.100.05: The hypothesis about Jacopino del Conte is not acceptable, as it is not supported neither by comparisons with other artworks of his, nor by the date 1566. At this time Jacopino was doing totally different portraits, which are characterised by a very mechanical and arid style. In my opinion, the painting was not created by this Roman painter, rather by an artist who also knew the pictorial tradition of Northern Italy”.</p>
+                        <p>In the catalog about North Italian paintings at the MET, written by Zeri in the following years and published in 1986, he shifted his opinion and attributed the portrait to the Bolognese painter Bartolomeo Passerotti</p>
+                        <p style="font-size: 0.8em; font-style: italic;" class="mx-2">"The composition is apparently derived from a model current in Rome, very likely by Jacopino del Conte, but the brushwork reflects Venetian technique around the middle of the century, especially that of the young Jacopo Tintoretto. The treatment of highlights, the thin layer of colors, and the general tone are quite typical of Passerotti, and the date is consistent with his work at that moment”. </p>
+                        <!-- <p id="linkzeriletter"><a href="https://fondazionezeri.unibo.it/en/photo-archive/documents-attached/correspondence-from-the-metropolitan-museum-of-art-new-york" target="_blank">LEARN MORE!</a></p> -->
                         
                       </div>
-                      <div class="col-5">
-                        <div id="leafletletterzeri" class="leafletimg"></div>
+                      <div class="col-4">
+                        <a href="https://libmma.contentdm.oclc.org/digital/collection/p15324coll10/id/188178"
+                          target="_blank">
+                          <img
+                            src="https://libmma.contentdm.oclc.org/digital/iiif/p15324coll10/187989/full/full/0/default.jpg"
+                            style="height: 50vh; display: block; margin: auto;">
+                        </a>
+                        <p class="img-caption mt-1">F. Zeri and E.E. Gardner (1986). "Italian Paintings. North Italian school”, Vicenza: Neri Pozza</p>
+                        <!-- <div id="leafletletterzeri" class="leafletimg"></div>
                         <small>Letter from Federico Zeri to Mrs. TenEyck Gardner, October 13th, 1949; f. 1
                           <a href="https://github.com/ManueleVeggi/infoviz/blob/fe6e1d8183a15c75c6bbbf4b98ce7754f4852ab6/assets/zeriLetters/CopyrightLetters.md" target="_blank">
                             <i class="bi bi-exclamation-triangle" data-toggle="modal" data-target="#exampleModal" onclick="alert('Albeit the repository and the associated webpage are released under license CC-BY 4.0, the reuse for any purposes of the digital reproduction of this letter by Federico Zeri. \nFor further information, contact the Archive of the Metropolitan Museum in New York and the Photo Archive of Fondazione Zeri in Bologna. These institutions allowed the reuse of this asset for the sole purpose of the current University project.')"></i>
                           </a>
-                        </small>
+                        </small> -->
                       </div>
 
                     </div>
                   </section>
                   <section class="sectionzeri" id="zerimetcatalog">
                     <div class="row">
-                      <div class="col-9">
-                        <p>One of the main contribution by Zeri to the understanding of the MET Collection is the creation of four catalogs about Italian painting. The one focused on <b>Northen Italy</b> (1986: 51) mentions the portrait and attributes it to Bartolomeo Passerotti:</p>
-                        <p style="font-size: 1em; font-style: italic;" class="mx-2">The composition is apparently derived from a model current in Rome, very likely by Jacopino del Conte, but the brushwork reflects Venetian technique around the middle of the century, especially that of the young Jacopo Tintoretto. The treatment of highlights, the thin layer of colors, and the general tone are quite typical of Passerotti, and the date is consistent with his work at that moment.</p>
-                        <p><b>Federico Zeri was eventually only partly right</b>: Jacopino del Conte is not admissible as possible creator of the portrait, yet neither is Passerotti. Recently Privitera proposed Mirabello Cavalori, who is now considered as the correct attributed painter of this portrait.</p>
+                      <div class="col-8 mt-2" style="height: 50vh; overflow-y: auto;">
+                        <p>In 1995, D. Stephen Pepper reoriented the discussion to suggest that the author came instead from among the so-called Studiolo artists, the group of painters that worked for Duke Francesco I de’ Medici in his private chamber in the Palazzo Vecchio in Florence beginning in 1570. Of these, Pepper focused on Girolamo Macchietti (1535–1592).</p>
+                        <p>Privitera and Feinberg later demonstrated as visual connections are even closer with another painter of this circled, <b>Mirabello Cavalori</b> (Florence ?-1572). This latter appears to be the most authoritative attribution nowadays, even if some scholars have recently proposed the names of Maso da San Friano and, again, of Jacopino del Conte.</p>
+                        <p>The discovery of a copy of the painting in a private collection, bearing the castle of Magione in the background, made it possible to identify the character depicted, who is supposed to be Fra Jacopo Salviati, nephew of the Grand Prior of the Knights of Malta, born in 1537 and thus 29 in 1566.</p>
                       </div>
-                      <div class="col-3">
-                        <a href="https://libmma.contentdm.oclc.org/digital/collection/p15324coll10/id/188178"
-                          target="_blank">
-                          <img
-                            src="https://libmma.contentdm.oclc.org/digital/iiif/p15324coll10/187989/full/full/0/default.jpg"
-                            style="height: 50vh;">
-                        </a>
+                      <div class="col-4 align-middle">
+                        <img class="img-fluid" src="assets/img/Foto_Fahy_ritagliata.jpg"
+                          id="jacopinodelcontemalta" style="height: 50vh; display: block; margin: auto;">
+                        <p class="img-caption mt-1">A reproduction of the painting in the Everett Fahy photo archive at the Zeri Foundation, where it is classified as “Mirabello Cavalori”</p>
                       </div>
                     </div>
                   </section>

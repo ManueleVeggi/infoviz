@@ -101,7 +101,7 @@ function drawBar(rawData) {
             width: '50%'
         },
         hAxis: {
-            title: 'Occurrence',
+            title: 'Occurrences',
             minValue: 0
         },
         vAxis: {

@@ -28,16 +28,16 @@ function drawVizDealer(rawData) {
     var data = google.visualization.arrayToDataTable(metData.slice(0, 13));
 
     var options = {
-        title: 'Most relevant art dealers for the creation of MET collection',
+        title: 'Most relevant donors for the creation of MET collection',
         hAxis: {
-            title: 'Art dealer',
+            title: 'Donor',
             slantedText: true,
             textStyle: {
                 'fontSize': 9
             }
         },
         vAxis: {
-            title: 'Occurrence in the collection',
+            title: 'Occurrences in the collection',
             viewWindow: {
                 max: 80,
                 min: 0

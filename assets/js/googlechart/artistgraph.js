@@ -101,7 +101,7 @@ function drawViz(rawData) {
             textStyle: {'fontSize': 9}
         },
         vAxis: {
-            title: 'Occurrence in the collection',
+            title: 'Occurrences in the collection',
             viewWindow: {
                 max: 25,
                 min: 0

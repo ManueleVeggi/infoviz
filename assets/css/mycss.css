@@ -104,6 +104,7 @@ p {
     visibility: hidden;
 }
 
+/*
 .about--options>a {
     position: relative;
     width: 200px;
@@ -121,6 +122,7 @@ p {
 .about--options>a:nth-child(1) {
     background-image: url("https://fondazionezeri.unibo.it/it/immagini/testate/fototeca-zeri-780x380/@@images/0a6491ce-78bb-47c7-a80b-63d52ee7a8ad.jpeg")
 }
+*/
 
 
 .about--options>a:hover h3 {
@@ -323,4 +325,6 @@ p {
 }
 
 
-
+.img-caption {
+    font-size: 75%;
+}
