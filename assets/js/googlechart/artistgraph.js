@@ -94,7 +94,7 @@ function drawViz(rawData) {
     var data = google.visualization.arrayToDataTable(metSortedData.slice(0, 13));
 
     var options = {
-        title: 'Most recurrent Italian painter at MET',
+        title: 'Most recurrent Italian painters at MET',
         hAxis: {
             title: 'Artists',
             slantedText: true,
